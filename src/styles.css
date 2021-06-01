@@ -2930,6 +2930,14 @@ textarea.w-select {
   padding-left: 84px;
 }
 
+.explantion.highlight {
+  margin-bottom: 24px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #e3eaeb;
+  box-shadow: 1px 1px 3px 0 #000;
+}
+
 .m1 {
   margin: 12px;
 }
