@@ -60,8 +60,9 @@
     <div class="explantion">
       I've been programming C &amp; C++ since the late 80's and then was introduced to<br>Java in the mid 90's. Then during my days as a consultant in the United States<br>I discovered the GoF Design Patterns and most specifically interfaces. It is such<br>a joy to do up an interface before ever really writing any serious code before<br>a project is to begin. Not only is a simple interface specification almost a one-to<br>-one correlation to a Use Case or a Sprint Given-When-Then but it makes for<br>easier documentation, unit testing as well as allowing the use of Mocks. 
     </div> 
+    <img src="assets/images/Intersection.png" alt="" class="i33" srcset=""> 
     <div class="text0 paragraph t3">
-      Steps to implement FrontDeskInterface 
+      Perform an Intersection on Two Unsorted Lists, Solutions 
     </div> 
     <div data-duration-in="300" data-duration-out="100" class="b1 w-tabs"> 
      <div class="w-tab-menu"> 
@@ -84,27 +85,36 @@
      </div> 
      <div class="w-tab-content"> 
       <div data-w-tab="Tab 1" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==1}" [hidden]="selector1==1"> 
-       <h4 class="h33">In a situation like this we write a simple Test Case</h4> 
+       <h4 class="h33">Solution #1: Classic Java Iterator Design Pattern, Immutable parameters</h4> 
        <div class="explantion">
-         Converting the Sprint Given-When-Then statement into a Catch2 style test case is usually a good approach. So we set up a series of theorectical interactions between a perspective customer and the person behind the counter trying to use the system to book a type of room. 
+         The following image is a snap shot of the solution developed using the Eclipse Mars.2 IDE using my iMac and the results shown on collabedit: 
        </div> 
-       <div class="explantion code"><br>SCENARIO("Verify FrontDesk", "[FrontDesk]")<br>{{"{"}}<br></div> 
-       <div class="explantion code indented">
-         GIVEN("that a hotel needs to reserve different types of rooms")<br>WHEN("a customer shows up at the hotel and asks for a room")<br>THEN("we inquire into the system the availability of that type of room.") {{"{"}} 
+       <div class="m1"> 
+        <img src="assets/images/Screen-Shot-2016-06-10-at-1.13.07-PM.png" sizes="(max-width: 479px) 100vw, 539px" srcset="assets/images/Screen-Shot-2016-06-10-at-1.13.07-PM-p-500x282.png 500w, assets/images/Screen-Shot-2016-06-10-at-1.13.07-PM-p-800x450.png 800w, assets/images/Screen-Shot-2016-06-10-at-1.13.07-PM-p-1080x608.png 1080w, assets/images/Screen-Shot-2016-06-10-at-1.13.07-PM-p-1600x900.png 1600w, assets/images/Screen-Shot-2016-06-10-at-1.13.07-PM.png 2560w" alt="" class="t4"> 
+        <h5 class="h22">Right-click and "Save Image as ..." to get a better look at this image!</h5> 
        </div> 
-       <div class="explantion code indented indented2">
-         FrontDesk frontDesk;<br>frontDesk.listRooms();<br>auto economy = frontDesk.selectEconomyRoom();<br>auto standard = frontDesk.selectMediumRoom();<br>auto luxury = frontDesk.selectExpensiveRoom(); 
-       </div> 
-       <div class="explantion code indented">
-         {{"}"}} 
-       </div> 
-       <div class="explantion code">
-         {{"}"}}<br>‍<br></div> 
        <div class="explantion">
-         The actual implementation of the test case is shown below: 
+         Despite getting lots of sleep and having prepared for the interview for three days, when it finally time for the interview my mind froze. It happens, usually when your asked a question in terms not immediately familiar to you. Such was the occasion this time around. I was asked by a lady with a degree in computer science to perform an intersection on two linked lists. The term 'intersection' through me for a loop but not because I didn't know what an intersection meant, but because I was, once again, expecting a far more difficult question such as 'rebuild a binary tree algorithm' from scratch. Once the woolies left my mind we were on our way. All she was really looking for was how I would implement a solution to finding a subset on a linked list. That being said, in my mind I had to take into consideration the speed of execution on the method depending upon the size of the linked list. In my mind, if the linked list was sorted, you could substantially reduce the amount of execution time merely be accessing the source list using an index as opposed to sequential access on every item in the query set.<br><br>I chose to implement the solution in Java but I was still thinking in terms of C++ and STL because in C++ and STL when you perform a sort on a list, the list is accessible for an indexed search. In Java, things work differently. Just because you sort a link list in Java, does not mean that the 'contains' test will make use of an index. Hence, my initial solution, while correct in terms of C++ and STL, and while it executes correctly, only utilizes a sequential access. However, the original problem does not require an index or a sort, so my solution again met the spec however the interviewer's primary design question ensued: " 
+        <em>What are the primary design considerations for such a solution?</em>" (paraphrased). I think she was looking for the keyword 'log' as in 'logarithmic' as in Computer Science degree terms, that as the larger the list, the longer it would take to complete the search. I used the word 'exponential' which means the same thing, and I think she heard that and that qualified me to move on to the next stage of the interview process, " 
+        <em>You should hear from the recruiters in two to three days, if not, be sure to contact to follow up</em>." (paraphrased)<br><br>Here is my initial solution: 
        </div> 
-       <img src="assets/images/RX001.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX001.png 500w, assets/images/RX001.png 800w, assets/images/RX001.png 1080w, assets/images/RX001.png 1600w, assets/images/RX001.png 2133w" alt="" class="t4"> 
-       <div class="explantion"><br>‍<br>Essentially, we have now expressed the top level methods for selecting three different types of rooms. But we haven't determined what a Room class is at this point, neither have we identified a Reservation class. This will come out in the implementation of the three methods identified above.<br>‍ 
+       <div class="m1"> 
+        <div class="p1 w-richtext"> 
+         <p>List&lt;Integer&gt; findIntersection(List&lt;Integer&gt; list1, List&lt;Integer&gt; list2) {{"{"}}</p> 
+         <p> List&lt;Integer&gt; result = new ArrayList&lt;Integer&gt;();</p> 
+         <p> Collections.sort(list1);</p> 
+         <p> Iterator&lt;Integer&gt; iterator = list2.iterator();</p> 
+         <p> while (iterator.hasNext()) {{"{"}}</p> 
+         <p> Integer i = iterator.next();</p> 
+         <p> if ( list1.contains(i) ) </p> 
+         <p> result.add(i);</p> 
+         <p> {{"}"}}</p> 
+         <p> return result;</p> 
+         <p> {{"}"}}</p> 
+        </div> 
+       </div> 
+       <div class="explantion">
+         Essentially what we are doing is reading each item of the query list (list2) and testing to see if the search list (list1) contains that item. This met the spec, the original question just fine but I was concerned about performance on large, very large lists as was the interviewer. My solution for that was to index the search list (list1). However, as mentioned, I forgot and I didn't have time to verify this issue properly with the time allotted in a short interview, all I could do is demonstrate what needed to be done. So, in some parallel universe, if Java's Collection.sort() method caused the 'contains' method of the sorted link list to be searched using an index then my solution would be correct.<br><br>Remember earlier I said that even though I implemented the initial solution in Java, I was still think in terms of C++ &amp; STL. Turns out the interviewer wasn't all that familiar with C++ or the STL however her preferred language just happened to be Java, so I lucked out there. But I don't know if she was aware that doing a Collections.sort doesn't not necessarily mean that an index will be used internally any search operations on the list. I only came to realize this after wards and as soon as I inquired by way of the Internet, sure enough, I found out that I was wrong! Conceptually correct yes, but Java's implementation of Collection.sort() works differently than the behaviour of C++ and STL. So now in this article I want to see what would be required to do in Java what is being handled in C++ and STL. In essence I need to make use of a binary tree. Fortunately Java does have a built in binary tree but it's implementation is not as straight forward as C++'s STL.<br><br>She also wanted to know about issues related to insertion on link list performance, for that I referred to Bjarne Stroustrup's most excellent lecture on precisely this issue (see Test Suite). 
        </div> 
       </div> 
       <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==2}" [hidden]="selector1==2"> 

@@ -2887,7 +2887,6 @@ textarea.w-select {
 }
 
 .p1 {
-  margin-left: 2px;
   padding: 12px 13px;
   background-color: #d3d3d3;
   box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.53);
@@ -2924,10 +2923,6 @@ textarea.w-select {
 
 .explantion.code.indented {
   padding-left: 51px;
-}
-
-.explantion.code.indented.indented2 {
-  padding-left: 84px;
 }
 
 .m1 {
