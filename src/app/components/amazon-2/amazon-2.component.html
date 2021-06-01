@@ -65,11 +65,11 @@
     </div> 
     <div data-duration-in="300" data-duration-out="100" class="b1 w-tabs"> 
      <div class="w-tab-menu"> 
-      <a data-w-tab="Tab 1" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==1}" (click)="selector1=1"> 
+      <a data-w-tab="Tab 1" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==1}" (click)="selector1=1"> 
        <div>
          #1 
        </div> </a> 
-      <a data-w-tab="Tab 2" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==2}" (click)="selector1=2"> 
+      <a data-w-tab="Tab 2" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==2}" (click)="selector1=2"> 
        <div>
          #2 
        </div> </a> 
@@ -83,7 +83,7 @@
        </div> </a> 
      </div> 
      <div class="w-tab-content"> 
-      <div data-w-tab="Tab 1" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==1}" [hidden]="selector1==1"> 
+      <div data-w-tab="Tab 1" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==1}" [hidden]="selector1==1"> 
        <h4 class="h33">In a situation like this we write a simple Test Case</h4> 
        <div class="explantion">
          Converting the Sprint Given-When-Then statement into a Catch2 style test case is usually a good approach. So we set up a series of theorectical interactions between a perspective customer and the person behind the counter trying to use the system to book a type of room. 
@@ -107,51 +107,35 @@
        <div class="explantion"><br>‍<br>Essentially, we have now expressed the top level methods for selecting three different types of rooms. But we haven't determined what a Room class is at this point, neither have we identified a Reservation class. This will come out in the implementation of the three methods identified above.<br>‍ 
        </div> 
       </div> 
-      <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==2}" [hidden]="selector1==2"> 
-       <h4 class="h33">Solution #2: Classic HashMap Solution, Immutable parameters</h4> 
+      <div data-w-tab="Tab 2" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==2}" [hidden]="selector1==2"> 
+       <h4 class="h33">The first test case makes assumptions...</h4> 
        <div class="explantion">
-         Fortunately for me, the interviewer was able to clearly indicate what she was looking for by specifying the interface of the function. I was looking for something a bit more complicated taking into consideration the possible size of the link list (into the millions). For most day to day operations, link lists can be fairly small and a simple iteration through the list will suffice, but in the case of millions of items, the performance of the function will slow down exponentially or (logarithmically) as she indicated: 
+         First and foremost, it assumes that the default constructor already has rooms available for rent. This is skipping ahead a little bit. Hence the first real test case is to add rooms to the FrontDesk object for it to select from. However, logically, a Front Desk in human terms is really a part of a Hotel class. As such it is logical to conclude that a Hotel has a FrontDesk but a FrontDesk may not have a Hotel. Such that, it could merely be a FrontDesk to some other type of building. So, to take into consideration the next programmer to have to maintain the code, we try to code in terms of human constructs, (that is, in ways that a non-programmer might think). 
        </div> 
        <div class="m1"> 
-        <img src="assets/images/Screen-Shot-2016-06-10-at-2.29.02-PM.png" sizes="(max-width: 479px) 100vw, 539px" srcset="assets/images/Screen-Shot-2016-06-10-at-2.29.02-PM-p-500x282.png 500w, assets/images/Screen-Shot-2016-06-10-at-2.29.02-PM-p-800x450.png 800w, assets/images/Screen-Shot-2016-06-10-at-2.29.02-PM-p-1080x608.png 1080w, assets/images/Screen-Shot-2016-06-10-at-2.29.02-PM-p-1600x900.png 1600w, assets/images/Screen-Shot-2016-06-10-at-2.29.02-PM.png 2560w" alt="" class="t4"> 
+        <img src="assets/images/RX001.png" sizes="(max-width: 479px) 100vw, 539px" srcset="assets/images/RX001.png 500w, assets/images/RX001.png 800w, assets/images/RX001.png 1080w, assets/images/RX001.png 1600w, assets/images/RX001.png 2133w" alt="" class="t4"> 
         <h5 class="h22">Right-click and "Save Image as ..." to get a better look at this image!</h5> 
        </div> 
        <div class="explantion">
-         Hence the need for an indexed solution. In Java, this indexed capability is readily available using the built-in Java HashMap container. The second solution assumes the link lists passed to the function are not sorted, therefore has to make use of it's own mapping which requires space on the heap: 
+         Hence the need for a Hotel class, (hence the advantage of writing our own interface to a Hotel allowing our code to be able to interface to currently existing systems). 
        </div> 
-       <div class="m1"> 
-        <div class="p1 w-richtext"> 
-         <p>List&lt;Integer&gt; findIntersection(List&lt;Integer&gt; list1, List&lt;Integer&gt; list2) {{"{"}}</p> 
-         <p> Map&lt;Integer,Integer&gt; searchList = new HashMap&lt;Integer,Integer&gt;();</p> 
-         <p> for (Integer value : list1) {{"{"}}</p> 
-         <p> searchList.put(value, value);</p> 
-         <p> {{"}"}}</p> 
-         <p> List&lt;Integer&gt; result = new ArrayList&lt;Integer&gt;();</p> 
-         <p> for (Integer test : list2) {{"{"}}</p> 
-         <p> if ( searchList.containsKey(test))</p> 
-         <p> result.add(test);</p> 
-         <p> {{"}"}}</p> 
-         <p> // Performance optimization secret:</p> 
-         <p> // Drop a hint to the GC to remove this</p> 
-         <p> // item from the heap as soon as possible!</p> 
-         <p> searchList = null;</p> 
-         <p> return result;</p> 
-         <p> {{"}"}}</p> 
-        </div> 
+       <img src="assets/images/RX003.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX003.png 500w, assets/images/RX003.png 800w, assets/images/RX003.png 1080w, assets/images/RX003.png 1331w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Also we write the test case for this interface: 
        </div> 
-       <div class="explantion">
-         There is also a Java performance hint dropped to the garbage collector (GC) to remove the HashMap as soon as possible. These secrets are the type you pick up after years of working with Java. In my case, it was a secret learned when working on a video conferencing package purely in Java to work over the Internet. I would discover that when you assign a variable to null, it drops a hint to Java's GC to remove it from it's internal storage. 
+       <img src="assets/images/RX002.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX002.png 500w, assets/images/RX002.png 800w, assets/images/RX002.png 1080w, assets/images/RX002.png 1529w" alt="" class="t4"> 
+       <div class="explantion bump">
+         One of the advantages of writng new code with interfaces, (known as the Abstract Design Pattern in Gof), is that when it comes time to add this new code to an existing database all that is required is an implementation that can interact with the currently existing system. For now, we will implement our Hotel and Room classes with C++ STL constructs: 
        </div> 
-       <div class="m1"> 
-        <img src="assets/images/Screen-Shot-2016-06-10-at-2.46.10-PM.png" sizes="(max-width: 479px) 100vw, 539px" srcset="assets/images/Screen-Shot-2016-06-10-at-2.46.10-PM-p-500x282.png 500w, assets/images/Screen-Shot-2016-06-10-at-2.46.10-PM-p-800x450.png 800w, assets/images/Screen-Shot-2016-06-10-at-2.46.10-PM-p-1080x608.png 1080w, assets/images/Screen-Shot-2016-06-10-at-2.46.10-PM-p-1600x900.png 1600w, assets/images/Screen-Shot-2016-06-10-at-2.46.10-PM.png 2560w" alt="" class="t4"> 
-        <h5 class="h22">Right-click and "Save Image as ..." to get a better look at this image!</h5> 
+       <img src="assets/images/RX004.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX004.png 500w, assets/images/RX004.png 800w, assets/images/RX004.png 1080w, assets/images/RX004.png 1591w" alt="" class="t4"> 
+       <div class="explantion bump">
+         To further demonstrate the advantages of programming with interfaces, let's assume that we have completed our new functionality and wish to connect the FrontDesk package to a typical (albeit complex) real world database that probably has been in service for a few years. The following is addictional class that bridge both worlds without breaking code in either source base: 
        </div> 
-       <div class="explantion">
-         So that's all there really is to this solution. I could go to talk able providing a solution if dynamically allocating a HashMap were not an option but that would be rambling. 
+       <img src="assets/images/RX005.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX005.png 500w, assets/images/RX005.png 800w, assets/images/RX005.png 1080w, assets/images/RX005.png 1656w" alt="" class="t4"> 
+       <div class="explantion bump">
+         So this demonstrates one of the major advantages of using interfaces to link up with pre-exisitng systems and without too much fuss. 
        </div> 
-       <div class="m1"> 
-        <h5 class="h22 h23">Right-click and "Save Image as ..." to get a better look at this image!</h5> 
-       </div> 
+       <div class="m1"></div> 
       </div> 
       <div data-w-tab="Tab 7" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==3}" [hidden]="selector1==3"> 
        <h4 class="h33">Solution #3: C++/STL Solution, Mutable parameters</h4> 

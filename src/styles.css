@@ -2938,6 +2938,10 @@ textarea.w-select {
   box-shadow: 1px 1px 3px 0 #000;
 }
 
+.explantion.bump {
+  margin-top: 37px;
+}
+
 .m1 {
   margin: 12px;
 }
