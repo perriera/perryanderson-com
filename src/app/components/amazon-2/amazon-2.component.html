@@ -55,7 +55,7 @@
     <div class="explantion">
       Now you maybe saying to yourself that that does not look like generic C++.<br>That's because it's not. It is borrowing some syntax sugar from Java: 
     </div> 
-    <div class="explantion code"><br>#define interface struct<br>#define pure = 0<br>#define implements :<br>#define extends :<br>‍ 
+    <div class="explantion code"><br>#define interface struct<br>#define pure = 0<br>#define implements : public<br>#define extends : public<br>‍ 
     </div> 
     <div class="explantion">
       I've been programming C &amp; C++ since the late 80's and then was introduced to<br>Java in the mid 90's. Then during my days as a consultant in the United States<br>I discovered the GoF Design Patterns and most specifically interfaces. It is such<br>a joy to do up an interface before ever really writing any serious code before<br>a project is to begin. Not only is a simple interface specification almost a one-to<br>-one correlation to a Use Case or a Sprint Given-When-Then but it makes for<br>easier documentation, unit testing as well as allowing the use of Mocks. 
@@ -81,13 +81,17 @@
        <div>
          #4 
        </div> </a> 
-      <a data-w-tab="Tab 5" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==5}" (click)="selector1=5"> 
+      <a data-w-tab="Tab 5" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==5}" (click)="selector1=5"> 
        <div>
          #5 
        </div> </a> 
-      <a data-w-tab="Tab 8" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==6}" (click)="selector1=6"> 
+      <a data-w-tab="Tab 6" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==6}" (click)="selector1=6"> 
        <div>
-         Test Suite 
+         #6 
+       </div> </a> 
+      <a data-w-tab="Tab 7" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==7}" (click)="selector1=7"> 
+       <div>
+         #7 
        </div> </a> 
      </div> 
      <div class="w-tab-content"> 
@@ -165,7 +169,10 @@
        <div class="explantion bump">
          All these considerations can be better named methods in the HotelInterface:. This is where Mocking frameworks come in really handy. As well, designing logical interfaces early in the software development process like this is more fun. 
        </div> 
-       <img src="assets/images/RX010.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX010.png 500w, assets/images/RX010.png 800w, assets/images/RX010.png 1080w, assets/images/RX010.png 1616w" alt="" class="t4"> 
+       <div class="explantion">
+         The second test case (below) shows a similar workflow to the natural reservation process except that in the latter case, the customer cancels the room. 
+       </div> 
+       <img src="assets/images/RX030.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX030.png 500w, assets/images/RX030.png 800w, assets/images/RX030.png 1080w, assets/images/RX030.png 1773w" alt="" class="t4"> 
        <a href="https://github.com/perriera/chessmind/blob/V1/include/chessmind/frontdesk/Hotel.hpp" target="_blank" class="w-inline-block"> 
         <div class="explantion bump">
           The source code for Hotel.hpp can be found here:<br></div> </a> 
@@ -207,12 +214,12 @@
        <div class="explantion bump">
          And we be sure to test it for Delta Hotel RoomKey format: 
        </div> 
-       <img src="assets/images/RX019.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX019.png 500w, assets/images/RX019.png 800w, assets/images/RX019.png 1080w, assets/images/RX019.png 1734w" alt="" class="t4"> 
+       <img src="assets/images/RX031.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX031.png 500w, assets/images/RX031.png 800w, assets/images/RX031.png 1080w, assets/images/RX031.png 1600w, assets/images/RX031.png 1910w" alt="" class="t4"> 
        <a href="https://github.com/perriera/chessmind/tree/V1/include/chessmind/frontdesk/roomkeys" target="_blank" class="w-inline-block"> 
         <div class="explantion bump">
           The source code for unique RoomKey formats can be found here:<br></div> </a> 
       </div> 
-      <div data-w-tab="Tab 5" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==5}" [hidden]="selector1==5"> 
+      <div data-w-tab="Tab 5" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==5}" [hidden]="selector1==5"> 
        <h4 class="h33">Re-evaluating FrontDeskInterface</h4> 
        <div class="explantion">
          Our first kick at the can had us propose an interface like this: 
@@ -245,9 +252,9 @@
        <div class="explantion bump">
          Hence our initial room selection using the gemeric base class is to simplyy take the first available room. In a derived class, this method can be refined to look for room type information based on the contents of the RoomKey, (aka DeltaRoomKey). 
        </div> 
-       <img src="assets/images/RX026.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX026.png 500w, assets/images/RX026.png 800w, assets/images/RX026.png 1080w, assets/images/RX026.png 1600w, assets/images/RX026.png 1935w" alt="" class="t4"> 
+       <img src="assets/images/RX033.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX033.png 500w, assets/images/RX033.png 800w, assets/images/RX033.png 1080w, assets/images/RX033.png 1600w, assets/images/RX033.png 1898w" alt="" class="t4"> 
        <div class="explantion bump">
-         Now that we have a dedicated for the logic related to Delta hotels, we can safelty express this logical where it makes sense, (and can be easily found again later). 
+         Now that we have a dedicated spot for Delta hotels, we can safely express this logic for Delta room types where it makes sense, (and can be easily found again later). 
        </div> 
        <img src="assets/images/RX027.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX027.png 500w, assets/images/RX027.png 800w, assets/images/RX027.png 1080w, assets/images/RX027.png 1758w" alt="" class="t4"> 
        <div class="explantion bump">
@@ -262,214 +269,40 @@
          Now that a hotel can determine the different types of rooms it has based on the type of hotel that it is, we can now proceed with the next logical step in the FrontDesk customer 'checkin' process. 
        </div> 
       </div> 
-      <div data-w-tab="Tab 8" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==6}" [hidden]="selector1==6"> 
-       <h4 class="h33">Intersection Test Suite</h4> 
+      <div data-w-tab="Tab 6" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==6}" [hidden]="selector1==6"> 
+       <h4 class="h33">Performing a checkin operation</h4> 
        <div class="explantion">
-         Now along with a coding solution Claire also requested a test suite to run against the solution to demonstrate that the solution worked in against a host of parameters: 
+         Now that the HotelInterface is resolving Rooms instances and Room type selections, all that remains for the FrontDeskInterface to do is coordinate the checkin process. 
        </div> 
-       <div class="m1"> 
-        <div class="p1 w-richtext"> 
-         <p>Find the intersection of two integer arrays.</p> 
-         <p>[1, 2, 3], [4, 5, 6] -&gt; []</p> 
-         <p>[1, 2], [2] -&gt; [2]</p> 
-        </div> 
+       <img src="assets/images/RX035.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX035.png 500w, assets/images/RX035.png 800w, assets/images/RX035.png 1080w, assets/images/RX035.png 1600w, assets/images/RX035.png 2000w, assets/images/RX035.png 2216w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Now the logical checkout method follows in kind: 
        </div> 
+       <img src="assets/images/RX036.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX036.png 500w, assets/images/RX036.png 800w, assets/images/RX036.png 1080w, assets/images/RX036.png 1600w, assets/images/RX036.png 2145w" alt="" class="t4"> 
+       <div class="explantion bump">
+         So this is a basic introduction into how to form a simple application in C++ using interfaces, STL, Catch2 and a few GoF Design Patterns. Along with some syntax sugar borrowed from Java, we have a decent means by which to add new functionality to currently existing system. 
+       </div> 
+      </div> 
+      <div data-w-tab="Tab 7" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==7}" [hidden]="selector1==7"> 
+       <h4 class="h33">FrontDeskInterface</h4> 
        <div class="explantion">
-         Using the notation that she provided I described typical parameters that would be the foundation for an exhaustive test against the proposed solution: 
+         While it is technically a work in progress, we are off to a good start with respect to the original objective of this application. The following interfaces are what have been developed so far. 
        </div> 
-       <div class="m1"> 
-        <div class="p1 w-richtext"> 
-         <p>Find the intersection of two integer arrays.</p> 
-         <p>[1, 2, 3], [4, 5, 6] -&gt; []</p> 
-         <p>[1, 2], [2] -&gt; [2]</p> 
-         <p>[1, 2, 3], [4, 5, 6] -&gt; []</p> 
-         <p>[1, 2, 3], [-1, -2, -3] -&gt; []</p> 
-         <p>[1, 2, 3], [1, 2, 3] -&gt; [1,2,3]</p> 
-         <p>[1, 2, 3], [] -&gt; []</p> 
-         <p>[], [1,2,3] -&gt; []</p> 
-         <p>[2, 1, 3], [] -&gt; []</p> 
-         <p>[2, 1, 3], [1,2,3] -&gt; [1,2,3]</p> 
-        </div> 
+       <img src="assets/images/RX037.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX037.png 500w, assets/images/RX037.png 800w, assets/images/RX037.png 1080w, assets/images/RX037.png 1637w" alt="" class="t4"> 
+       <div class="explantion bump">
+         During the interview the interviewer wanted to add a last minute change. Rather than just have three types of rooms, what if we had no idea how many types of rooms a hotel might have. Hence we added the 'selectRoomType' method which uwas to use an int to identify, (at runtime) the different types of rooms a hotel could have. While we could have add that method here, it was left "where is, as is" just to show where additional functionality could be added. 
        </div> 
+       <img src="assets/images/RX038.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX038.png 500w, assets/images/RX038.png 800w, assets/images/RX038.png 1080w, assets/images/RX038.png 1764w" alt="" class="t4"> 
+       <div class="explantion bump">
+         The HotelInterface ended up taking the brunt of the classification logic and along with the RoomKey base class, allowed for easy adoption of various room types recognition via the format of a given room number. Complete with lots of places for expansion in the future. 
+       </div> 
+       <img src="assets/images/RX039.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX039.png 500w, assets/images/RX039.png 800w, assets/images/RX039.png 1080w, assets/images/RX039.png 1382w" alt="" class="t4"> 
+       <div class="explantion bump">
+         GIVEN that the HotelInterface had to handle these requests better than the original FrontDeskInterface, we added GoF Proxy Design Pattern here to keep the classes insync with each when different types of rooms were required. 
+       </div> 
+       <h4 class="h33">Final thoughts</h4> 
        <div class="explantion">
-         Again it was important to pass in unsorted test lists to ensure that our binary solution worked as expected: 
-       </div> 
-       <div class="m1"> 
-        <div class="p1 w-richtext"> 
-         <p>Find the intersection of two integer arrays.</p> 
-         <p>[2, 1, 3], [1,2,3] -&gt; [1,2,3]</p> 
-        </div> 
-       </div> 
-       <div class="explantion">
-         In Java a JUnit test case could be implemented as follows: 
-       </div> 
-       <div class="m1"> 
-        <div class="p1 w-richtext"> 
-         <p>import java.util.ArrayList;</p> 
-         <p>import java.util.List;</p> 
-         <p>import org.junit.Assert;</p> 
-         <p>import org.junit.Before;</p> 
-         <p>import org.junit.Test;</p> 
-         <p>public class SolutionTest {{"{"}}</p> 
-         <p> List&lt;Integer&gt; list1;</p> 
-         <p> List&lt;Integer&gt; list2;</p> 
-         <p> @Before</p> 
-         <p> public void setUp() throws Exception {{"{"}}</p> 
-         <p> list1 = new ArrayList&lt;Integer&gt;();</p> 
-         <p> list2 = new ArrayList&lt;Integer&gt;();</p> 
-         <p> {{"}"}}</p> 
-         <p> public void loadLists(int a[], int b[]) {{"{"}}</p> 
-         <p> for (int x : a) {{"{"}}</p> 
-         <p> list1.add(x);</p> 
-         <p> {{"}"}}</p> 
-         <p> for (int y : b) {{"{"}}</p> 
-         <p> list2.add(y);</p> 
-         <p> {{"}"}}</p> 
-         <p> {{"}"}}</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC01() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 1, 3, 7 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} 2, 3, 8 {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==1);</p> 
-         <p> Assert.assertTrue(list3.get(0)==3);</p> 
-         <p> {{"}"}}</p> 
-         <p> // Find the intersection of two integer arrays.</p> 
-         <p> // [1, 2, 3], [4, 5, 6] -&gt; []</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC02() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 1, 2, 3 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} 4, 5, 6 {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==0);</p> 
-         <p> {{"}"}}</p> 
-         <p> // [1, 2], [2] -&gt; [2]</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC03() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 1, 2 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} 2 {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==1);</p> 
-         <p> Assert.assertTrue(list3.get(0)==2);</p> 
-         <p> {{"}"}}</p> 
-         <p> // [1, 2, 3], [-1, -2, -3] -&gt; []</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC04() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 1, 2, 3 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} -1, -2, -3 {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==0);</p> 
-         <p> {{"}"}}</p> 
-         <p> // [1, 2, 3], [1, 2, 3] -&gt; [1,2,3]</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC05() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 1, 2, 3 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} 1, 2, 3 {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==3);</p> 
-         <p> Assert.assertTrue(list3.get(0)==1);</p> 
-         <p> Assert.assertTrue(list3.get(1)==2);</p> 
-         <p> Assert.assertTrue(list3.get(2)==3);</p> 
-         <p> {{"}"}}</p> 
-         <p> // [1, 2, 3], [] -&gt; []</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC06() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 1, 2, 3 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==0);</p> 
-         <p> {{"}"}}</p> 
-         <p> // [], [1,2,3] -&gt; []</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC07() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} {{"}"}};</p> 
-         <p> int b[] = {{"{"}} 1, 2, 3 {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==0);</p> 
-         <p> {{"}"}}</p> 
-         <p> // [2, 1, 3], [] -&gt; []</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC08() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 2, 1, 3 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==0);</p> 
-         <p> {{"}"}}</p> 
-         <p> // [2, 1, 3], [1,2,3] -&gt; [1,2,3]</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC09() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 2, 1, 3 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} 1, 2, 3 {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==3);</p> 
-         <p> Assert.assertTrue(list3.get(0)==1);</p> 
-         <p> Assert.assertTrue(list3.get(1)==2);</p> 
-         <p> Assert.assertTrue(list3.get(2)==3);</p> 
-         <p> {{"}"}}</p> 
-         <p> // [2, 1, 3], [2,1,3] -&gt; [1,2,3]</p> 
-         <p> @Test</p> 
-         <p> public final void testFindIntersectionTC10() {{"{"}}</p> 
-         <p> int a[] = {{"{"}} 2, 1, 3 {{"}"}};</p> 
-         <p> int b[] = {{"{"}} 2, 1, 3 {{"}"}};</p> 
-         <p> loadLists(a,b);</p> 
-         <p> Solution s = new Solution();</p> 
-         <p> List&lt;Integer&gt; list3 = s.findIntersection(list1, list2);</p> 
-         <p> Assert.assertTrue(list3.size()==3);</p> 
-         <p> Assert.assertTrue(list3.get(0)==1);</p> 
-         <p> Assert.assertTrue(list3.get(1)==2);</p> 
-         <p> Assert.assertTrue(list3.get(2)==3);</p> 
-         <p> {{"}"}}</p> 
-         <p>{{"}"}}</p> 
-        </div> 
-       </div> 
-       <div class="explantion">
-         What's important to note about using a test framework, especially when developing a solution for a customer, is that it is so important to get the tiny details correct where possible!<br><br><strong>About the last test case: [2, 1, 3], [2,1,3] -&gt; [1,2,3]</strong><br><br>In this case, while writing a test case for this method, such a tiny detail was highlighted in the 10th use case. One where the result set had to be sorted. The original Java solution highlighted in the first tab, overlooked this requirement. But a close look at the test case specified showed that the result on the last test has to be in sorted arrangement. Hence a need to change the original HashMap solution: 
-       </div> 
-       <div class="m1"> 
-        <div class="p1 w-richtext"> 
-         <p>List&lt;Integer&gt; findIntersection(List&lt;Integer&gt; list1, List&lt;Integer&gt; list2) {{"{"}}</p> 
-         <p> Map&lt;Integer,Integer&gt; searchList = new HashMap&lt;Integer,Integer&gt;();</p> 
-         <p> for (Integer value : list1) {{"{"}}</p> 
-         <p> searchList.put(value, value);</p> 
-         <p> {{"}"}}</p> 
-         <p> List&lt;Integer&gt; result = new ArrayList&lt;Integer&gt;();</p> 
-         <p> for (Integer test : list2) {{"{"}}</p> 
-         <p> if ( searchList.containsKey(test))</p> 
-         <p> result.add(test);</p> 
-         <p> {{"}"}}</p> 
-         <p> // Performance optimization secret:</p> 
-         <p> // Drop a hint to the GC to remove this</p> 
-         <p> // item from the heap as soon as possible!</p> 
-         <p> searchList = null;</p> 
-         <p> <strong>Collections.sort(result);</strong></p> 
-         <p> return result;</p> 
-         <p> {{"}"}}</p> 
-        </div> 
-        <div class="explantion">
-          This test case is by no means complete but for the purposes of this blog it clearly demonstrates the need for test cases in professional software development environments. 
-        </div> 
-       </div> 
-       <h4 class="h33">Final thoughts!</h4> 
-       <div class="explantion">
-         Adding this section to my blog was a good investment of my time! As showing two different implementations of a solution in both Java and C++ gives us a chance to see the pros and cons of both languages. It is in my humble opinion that Java provides a cleaner implementation for basic but common link list management tools such as List&lt;T&gt;, Hashmap&lt;T&gt; and Collections. 
+         Adding this section to my blog was a good investment of my time as it gave me an opportunity to demonstrate popular design and programming methods with respect to C++, STL, Catch2 and Gof Design Patterns. 
        </div> 
        <div class="explantion">
          One other thing to keep in mind however is to look out for brain freeze before an important interview. About a 1/2 hour before this interview I was handed a Tim Horton's Maple Ice Capp and perhaps this was the cause of me having recollection issues with respect to the HashMap class.<br><br><a target="_blank" href="https://www.youtube.com/watch?v=KwtcmEbbyeI" class="l99">Perhaps</a> ... 
