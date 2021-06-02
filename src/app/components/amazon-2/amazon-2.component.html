@@ -77,11 +77,15 @@
        <div>
          #3 
        </div> </a> 
-      <a data-w-tab="Tab 4" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==4}" (click)="selector1=4"> 
+      <a data-w-tab="Tab 4" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==4}" (click)="selector1=4"> 
        <div>
          #4 
        </div> </a> 
-      <a data-w-tab="Tab 8" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==5}" (click)="selector1=5"> 
+      <a data-w-tab="Tab 5" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==5}" (click)="selector1=5"> 
+       <div>
+         #5 
+       </div> </a> 
+      <a data-w-tab="Tab 8" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==6}" (click)="selector1=6"> 
        <div>
          Test Suite 
        </div> </a> 
@@ -168,7 +172,7 @@
        <div class="explantion">
          Further, an added advantage to using interfaces in C++ is that the moment you change the interface itself, all C++ code related to changes are instantly detected by the C++ complier. Hence, you can make all the necessary changes in advance and safely from inside logical arranged test cases.<br></div> 
       </div> 
-      <div data-w-tab="Tab 4" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==4}" [hidden]="selector1==4"> 
+      <div data-w-tab="Tab 4" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==4}" [hidden]="selector1==4"> 
        <h4 class="h33">Encapsulating the RoomKey</h4> 
        <div class="explantion">
          The C++ STL makes life so much easier when it comes to simple applications such as described here. However, it doesn't takes an experienced mind to know that no two hotel chains are the same when it comes to room numbers. Hence, we are encouraged to setup a class to encapsulate this behavioir in our design. 
@@ -185,10 +189,80 @@
         <div class="explantion bump">
           The source code for RoomKey.hpp can be found here:<br></div> </a> 
        <div class="explantion">
-         Up to this point we have assumed that a RoomKey will always be an integer. But what do we do if it turns out that the legacy system of Paris Hilton's fame likes to classify different types of rooms using a single letter in front? 
+         Now the above code can be enhanced to test for a particular syntax on the room number format. Another option would be to apply the GoF Decorator Design pattern whereby a derived class specializing in a particular room number format can be dedicated to test for particular syntax. 
+       </div> 
+       <img src="assets/images/RX014.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX014.png 500w, assets/images/RX014.png 800w, assets/images/RX014.png 1080w, assets/images/RX014.png 1600w, assets/images/RX014.png 1938w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Where the actual syntax checking takes place in a dedicate exception class: 
+       </div> 
+       <img src="assets/images/RX015.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX015.png 500w, assets/images/RX015.png 800w, assets/images/RX015.png 1080w, assets/images/RX015.png 1600w, assets/images/RX015.png 1930w" alt="" class="t4"> 
+       <div class="explantion bump">
+         And we be sure to test it for basic functionality: 
+       </div> 
+       <img src="assets/images/RX016.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX016.png 500w, assets/images/RX016.png 800w, assets/images/RX016.png 1080w, assets/images/RX016.png 1600w, assets/images/RX016.png 1820w" alt="" class="t4"> 
+       <div class="explantion bump">
+         And in the event we want to add Delta hotel support: 
+       </div> 
+       <img src="assets/images/RX017.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX017.png 500w, assets/images/RX017.png 800w, assets/images/RX017.png 1080w, assets/images/RX017.png 1678w" alt="" class="t4"> 
+       <div class="explantion bump">
+         And we be sure to test it for Delta Hotel RoomKey format: 
+       </div> 
+       <img src="assets/images/RX019.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX019.png 500w, assets/images/RX019.png 800w, assets/images/RX019.png 1080w, assets/images/RX019.png 1734w" alt="" class="t4"> 
+       <a href="https://github.com/perriera/chessmind/tree/V1/include/chessmind/frontdesk/roomkeys" target="_blank" class="w-inline-block"> 
+        <div class="explantion bump">
+          The source code for unique RoomKey formats can be found here:<br></div> </a> 
+      </div> 
+      <div data-w-tab="Tab 5" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==5}" [hidden]="selector1==5"> 
+       <h4 class="h33">Re-evaluating FrontDeskInterface</h4> 
+       <div class="explantion">
+         Our first kick at the can had us propose an interface like this: 
+       </div> 
+       <img src="assets/images/RX020.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX020.png 500w, assets/images/RX020.png 800w, assets/images/RX020.png 1080w, assets/images/RX020.png 1699w" alt="" class="t4"> 
+       <div class="explantion bump">
+         However, in light of the HotelInterface doing so much work for us, w e can leave the internal details of Room management elsewhere and just concentrate on the transaction at hand. Hence we play with a slightly different interface design inside the test case: 
+       </div> 
+       <img src="assets/images/RX021.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX021.png 500w, assets/images/RX021.png 800w, assets/images/RX021.png 1080w, assets/images/RX021.png 1600w, assets/images/RX021.png 1902w" alt="" class="t4"> 
+       <div class="explantion bump">
+         The above modification of the selectEconomyRoom method implies that a generica hotel would really not be the best place to determine if a given room is of a particular type. Given that common knowledge suggests that some hotel lines encode the type of room inside the room number key itself, it stands to reason then that we should supply different types of Hotel classes. 
+       </div> 
+       <div class="explantion">
+         Naturally, smaller motels and hotels probably only use a basic numbering system but that being said, they might internally have certain number ranges to represent different types of rooms. 
+       </div> 
+       <div class="explantion highlight"> 
+        <strong>GIVEN</strong> the FrontDesk implementation will prefer the 'selectEconomyRoom' request be deferred to the Hotel instance 
+        <strong>WHEN</strong> we need the same method on both intefaces 
+        <strong>THEN</strong> we need to do is apply the Proxy Design Pattern. 
+       </div> 
+       <img src="assets/images/RX022.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX022.png 500w, assets/images/RX022.png 800w, assets/images/RX022.png 1080w, assets/images/RX022.png 1355w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Such that both the FrontDeskInterface and the HotelInterface will both share methods that are declared as part of the RoomSelectionInterface: 
+       </div> 
+       <img src="assets/images/RX023.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX023.png 500w, assets/images/RX023.png 800w, assets/images/RX023.png 1080w, assets/images/RX023.png 1399w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Now while this is a nice improvement, it stands to reason that the generic Hotel class is simply not in a good place to determine just what is a room type. For this, we are better off defining classes for each particular type of hotel, (even cheap hotels). 
+       </div> 
+       <img src="assets/images/RX025.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX025.png 500w, assets/images/RX025.png 800w, assets/images/RX025.png 1080w, assets/images/RX025.png 1424w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Hence our initial room selection using the gemeric base class is to simplyy take the first available room. In a derived class, this method can be refined to look for room type information based on the contents of the RoomKey, (aka DeltaRoomKey). 
+       </div> 
+       <img src="assets/images/RX026.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX026.png 500w, assets/images/RX026.png 800w, assets/images/RX026.png 1080w, assets/images/RX026.png 1600w, assets/images/RX026.png 1935w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Now that we have a dedicated for the logic related to Delta hotels, we can safelty express this logical where it makes sense, (and can be easily found again later). 
+       </div> 
+       <img src="assets/images/RX027.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX027.png 500w, assets/images/RX027.png 800w, assets/images/RX027.png 1080w, assets/images/RX027.png 1758w" alt="" class="t4"> 
+       <div class="explantion bump">
+         In the case of a cheap hotel, perhaps certain number ranges represent certain types of rooms, so we write the implementation for the CheapHotel class: 
+       </div> 
+       <img src="assets/images/RX029.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX029.png 500w, assets/images/RX029.png 800w, assets/images/RX029.png 1080w, assets/images/RX029.png 1626w" alt="" class="t4"> 
+       <div class="explantion bump">
+         The test case shows the difference in RoomKey type: 
+       </div> 
+       <img src="assets/images/RX028.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX028.png 500w, assets/images/RX028.png 800w, assets/images/RX028.png 1080w, assets/images/RX028.png 1600w, assets/images/RX028.png 1890w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Now that a hotel can determine the different types of rooms it has based on the type of hotel that it is, we can now proceed with the next logical step in the FrontDesk customer 'checkin' process. 
        </div> 
       </div> 
-      <div data-w-tab="Tab 8" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==5}" [hidden]="selector1==5"> 
+      <div data-w-tab="Tab 8" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==6}" [hidden]="selector1==6"> 
        <h4 class="h33">Intersection Test Suite</h4> 
        <div class="explantion">
          Now along with a coding solution Claire also requested a test suite to run against the solution to demonstrate that the solution worked in against a host of parameters: 

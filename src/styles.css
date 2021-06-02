@@ -2934,7 +2934,7 @@ textarea.w-select {
 }
 
 .explantion.highlight {
-  margin-bottom: 24px;
+  margin: 10px 10px 17px;
   padding: 10px 15px;
   border-radius: 10px;
   background-color: #e3eaeb;
