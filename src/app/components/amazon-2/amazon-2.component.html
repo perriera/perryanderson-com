@@ -69,15 +69,19 @@
        <div>
          #1 
        </div> </a> 
-      <a data-w-tab="Tab 2" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==2}" (click)="selector1=2"> 
+      <a data-w-tab="Tab 2" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==2}" (click)="selector1=2"> 
        <div>
          #2 
        </div> </a> 
-      <a data-w-tab="Tab 7" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==3}" (click)="selector1=3"> 
+      <a data-w-tab="Tab 3" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==3}" (click)="selector1=3"> 
        <div>
          #3 
        </div> </a> 
-      <a data-w-tab="Tab 8" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==4}" (click)="selector1=4"> 
+      <a data-w-tab="Tab 4" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==4}" (click)="selector1=4"> 
+       <div>
+         #4 
+       </div> </a> 
+      <a data-w-tab="Tab 8" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==5}" (click)="selector1=5"> 
        <div>
          Test Suite 
        </div> </a> 
@@ -107,7 +111,7 @@
        <div class="explantion"><br>‍<br>Essentially, we have now expressed the top level methods for selecting three different types of rooms. But we haven't determined what a Room class is at this point, neither have we identified a Reservation class. This will come out in the implementation of the three methods identified above.<br>‍ 
        </div> 
       </div> 
-      <div data-w-tab="Tab 2" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==2}" [hidden]="selector1==2"> 
+      <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==2}" [hidden]="selector1==2"> 
        <h4 class="h33">The first test case makes assumptions...</h4> 
        <div class="explantion">
          First and foremost, it assumes that the default constructor already has rooms available for rent. This is skipping ahead a little bit. Hence the first real test case is to add rooms to the FrontDesk object for it to select from. However, logically, a Front Desk in human terms is really a part of a Hotel class. As such it is logical to conclude that a Hotel has a FrontDesk but a FrontDesk may not have a Hotel. Such that, it could merely be a FrontDesk to some other type of building. So, to take into consideration the next programmer to have to maintain the code, we try to code in terms of human constructs, (that is, in ways that a non-programmer might think). 
@@ -137,107 +141,54 @@
        </div> 
        <div class="m1"></div> 
       </div> 
-      <div data-w-tab="Tab 7" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==3}" [hidden]="selector1==3"> 
-       <h4 class="h33">Solution #3: C++/STL Solution, Mutable parameters</h4> 
+      <div data-w-tab="Tab 3" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==3}" [hidden]="selector1==3"> 
+       <h4 class="h33">Organizing the Rooms...</h4> 
        <div class="explantion">
-         An STL solution to this problem is actually a variation to the merge solution. 
-       </div> 
-       <h4 class="h33">Synopsis:</h4> 
-       <div class="explantion">
-         The section shows a C++ / STL coding equivalent to the Java HashMap coding solution. Below you will see the merge solution used in the Bloomberg interview: 
-       </div> 
-       <div class="m1"> 
-        <div class="p1 w-richtext"> 
-         <p>// Merge Solution #1</p> 
-         <p>class Solution {{"{"}}</p> 
-         <p>public:</p> 
-         <p> ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {{"{"}}</p> 
-         <p> std::list&lt;int&gt; intList;</p> 
-         <p> ListNode* h1 = l1, *h2 = l2;</p> 
-         <p> while ( h1!=NULL ) {{"{"}}</p> 
-         <p> intList.push_back(h1-&gt;val);</p> 
-         <p> h1 = h1-&gt;next;</p> 
-         <p> {{"}"}}</p> 
-         <p> while ( h2!=NULL ) {{"{"}}</p> 
-         <p> intList.push_back(h2-&gt;val);</p> 
-         <p> h2 = h2-&gt;next;</p> 
-         <p> {{"}"}}</p> 
-         <p> ListNode* listNode = new ListNode(0), *p = listNode, *result = listNode;</p> 
-         <p> intList.sort();</p> 
-         <p> std::list&lt;int&gt;::const_iterator iterator;</p> 
-         <p> for (iterator = intList.begin(); iterator != intList.end(); ++iterator) {{"{"}}</p> 
-         <p> int value = *iterator;</p> 
-         <p> p = listNode;</p> 
-         <p> listNode-&gt;val = value;</p> 
-         <p> listNode = new ListNode(0);</p> 
-         <p> p-&gt;next = listNode;</p> 
-         <p> {{"}"}}</p> 
-         <p> p-&gt;next = NULL;</p> 
-         <p> if ( p == listNode ) {{"{"}}</p> 
-         <p> delete listNode;</p> 
-         <p> return NULL;</p> 
-         <p> {{"}"}}</p> 
-         <p> return result;</p> 
-         <p> {{"}"}}</p> 
-         <p>{{"}"}};</p> 
-        </div> 
+         It is advantageous to organize your C++ code in terms of everyday terminology. In this way, you can solite help from subject matter experts better, using the age old English language). Hence, the more human readable your code, the easier it is for both yourself and your colleagues to contribute to it's success. 
        </div> 
        <div class="explantion">
-         All we have to do here is change the merge operations to one of an insertion operation, returning null if the result set is empty. We perform an optional sort on the result set for clarity purposes: 
+         In the case of the Room class for the Hotel class, we want to be able to identify rooms. At least by using their traditional room numbers. For example, while our first test case allowed us to add a room to a hotel, removing a particular room would logically require a human readable room number. Hence our next test case draws upon both the need for a room number as well as shed light on how a hotel might keep track of available rooms vs. reserved rooms. 
        </div> 
-       <div class="m1"> 
-        <div class="p1 w-richtext"> 
-         <p>// Intersection Solution #1</p> 
-         <p>struct ListNode {{"{"}}</p> 
-         <p> int val;</p> 
-         <p> ListNode *next;</p> 
-         <p> ListNode(int x) : val(x), next(NULL) {{"{"}}{{"}"}}</p> 
-         <p>{{"}"}};</p> 
-         <p>class Solution {{"{"}}</p> 
-         <p>public:</p> 
-         <p> ListNode* intersectTwoLists(ListNode* l1, ListNode* l2) {{"{"}}</p> 
-         <p> if ( l1 == NULL )</p> 
-         <p> return NULL;</p> 
-         <p> std::map&lt;int,ListNode*&gt; searchList;</p> 
-         <p> ListNode* h1 = l1, *h2 = l2;</p> 
-         <p> while ( h1!=NULL ) {{"{"}}</p> 
-         <p> searchList.insert ( std::pair&lt;int,ListNode*&gt;(h1-&gt;val,h1) );</p> 
-         <p> h1 = h1-&gt;next;</p> 
-         <p> {{"}"}}</p> 
-         <p> std::list&lt;int&gt; intList;</p> 
-         <p> while(h2 != NULL)</p> 
-         <p> {{"{"}}</p> 
-         <p> if(searchList.find(h2-&gt;val) != searchList.end()) {{"{"}}</p> 
-         <p> intList.push_back(h2-&gt;val);</p> 
-         <p> {{"}"}}</p> 
-         <p> h2 = h2-&gt;next;</p> 
-         <p> {{"}"}}</p> 
-         <p> if ( intList.size() == 0 )</p> 
-         <p> return NULL;</p> 
-         <p> intList.sort(); // optional</p> 
-         <p> ListNode* listNode = new ListNode(0), *p = listNode, *result = listNode;</p> 
-         <p> std::list&lt;int&gt;::const_iterator iterator;</p> 
-         <p> for (iterator = intList.begin(); iterator != intList.end(); ++iterator) {{"{"}}</p> 
-         <p> int value = *iterator;</p> 
-         <p> p = listNode;</p> 
-         <p> listNode-&gt;val = value;</p> 
-         <p> listNode = new ListNode(0);</p> 
-         <p> p-&gt;next = listNode;</p> 
-         <p> {{"}"}}</p> 
-         <p> p-&gt;next = NULL;</p> 
-         <p> return result;</p> 
-         <p> {{"}"}}</p> 
-         <p> </p> 
-         <p>{{"}"}};</p> 
-        </div> 
+       <img src="assets/images/RX007.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX007.png 500w, assets/images/RX007.png 800w, assets/images/RX007.png 1080w, assets/images/RX007.png 1739w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Now upon piecing together this test case, it becomes obvious that changing the HotelInterface class to use the verbs 'reserve' is advantageous. But the logical inverse to reserving a room is the guest checkout process, hence if we use the 'checkin' verb instead of 'reserve' might make more sense. However, checking in and checking out a guest is typically a function of the clerk at the front desk. Not only that, but after a guest leaves the room the room itself is actually in need of cleaning. Moreover, what do you do if after booking a room but that the guest cancels at the last minute? 
        </div> 
+       <img src="assets/images/RX011.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX011.png 500w, assets/images/RX011.png 800w, assets/images/RX011.png 1080w, assets/images/RX011.png 1599w" alt="" class="t4"> 
+       <div class="explantion bump">
+         By and large the Hotel instance is not really concerned with the type of room, just which rooms are currently available for new guests. 
+       </div> 
+       <img src="assets/images/RX010.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX010.png 500w, assets/images/RX010.png 800w, assets/images/RX010.png 1080w, assets/images/RX010.png 1616w" alt="" class="t4"> 
+       <div class="explantion bump">
+         All these considerations can be better named methods in the HotelInterface:. This is where Mocking frameworks come in really handy. As well, designing logical interfaces early in the software development process like this is more fun. 
+       </div> 
+       <img src="assets/images/RX010.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX010.png 500w, assets/images/RX010.png 800w, assets/images/RX010.png 1080w, assets/images/RX010.png 1616w" alt="" class="t4"> 
+       <a href="https://github.com/perriera/chessmind/blob/V1/include/chessmind/frontdesk/Hotel.hpp" target="_blank" class="w-inline-block"> 
+        <div class="explantion bump">
+          The source code for Hotel.hpp can be found here:<br></div> </a> 
        <div class="explantion">
-         Even though the STL C++ solution works (and to the technically inclined works as expected), it's easy to see that the Java solution shines in it's coding equivalent and simplicity. 
-       </div> 
-       <img src="assets/images/Screen-Shot-2016-06-10-at-3.59.24-PM.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/Screen-Shot-2016-06-10-at-3.59.24-PM-p-500x282.png 500w, assets/images/Screen-Shot-2016-06-10-at-3.59.24-PM-p-800x450.png 800w, assets/images/Screen-Shot-2016-06-10-at-3.59.24-PM-p-1080x608.png 1080w, assets/images/Screen-Shot-2016-06-10-at-3.59.24-PM-p-1600x900.png 1600w, assets/images/Screen-Shot-2016-06-10-at-3.59.24-PM.png 2560w" alt="" class="t4"> 
-       <h5 class="h22">Right-click and "Save Image as ..." to get a better look at this image!</h5> 
+         Further, an added advantage to using interfaces in C++ is that the moment you change the interface itself, all C++ code related to changes are instantly detected by the C++ complier. Hence, you can make all the necessary changes in advance and safely from inside logical arranged test cases.<br></div> 
       </div> 
-      <div data-w-tab="Tab 8" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==4}" [hidden]="selector1==4"> 
+      <div data-w-tab="Tab 4" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==4}" [hidden]="selector1==4"> 
+       <h4 class="h33">Encapsulating the RoomKey</h4> 
+       <div class="explantion">
+         The C++ STL makes life so much easier when it comes to simple applications such as described here. However, it doesn't takes an experienced mind to know that no two hotel chains are the same when it comes to room numbers. Hence, we are encouraged to setup a class to encapsulate this behavioir in our design. 
+       </div> 
+       <div class="explantion">
+         Up to this point we have assumed that a RoomKey will always be an integer. But what do we do if it turns out that the legacy system of Paris Hilton's fame likes to classify different types of rooms using a single letter in front? 
+       </div> 
+       <img src="assets/images/RX012.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX012.png 500w, assets/images/RX012.png 800w, assets/images/RX012.png 1083w" alt="" class="t4"> 
+       <div class="explantion bump">
+         Hence we make use of C++'s bells and whistles to allow the RoomKey to accept either long values or text strings in which case it'll simply convert it to a tradtional crc32 value for organizing purposes. 
+       </div> 
+       <img src="assets/images/RX013.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX013.png 500w, assets/images/RX013.png 800w, assets/images/RX013.png 1080w, assets/images/RX013.png 1600w, assets/images/RX013.png 1831w" alt="" class="t4"> 
+       <a href="https://github.com/perriera/chessmind/blob/V1/include/chessmind/frontdesk/RoomKey.hpp" target="_blank" class="w-inline-block"> 
+        <div class="explantion bump">
+          The source code for RoomKey.hpp can be found here:<br></div> </a> 
+       <div class="explantion">
+         Up to this point we have assumed that a RoomKey will always be an integer. But what do we do if it turns out that the legacy system of Paris Hilton's fame likes to classify different types of rooms using a single letter in front? 
+       </div> 
+      </div> 
+      <div data-w-tab="Tab 8" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==5}" [hidden]="selector1==5"> 
        <h4 class="h33">Intersection Test Suite</h4> 
        <div class="explantion">
          Now along with a coding solution Claire also requested a test suite to run against the solution to demonstrate that the solution worked in against a host of parameters: 

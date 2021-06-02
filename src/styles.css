@@ -1381,10 +1381,10 @@ textarea.w-select {
   -ms-user-select: none;
   user-select: none;
 }
-.w-slider-arrow-left [class^="w-icon-"],
-.w-slider-arrow-right [class^="w-icon-"],
-.w-slider-arrow-left [class*=" w-icon-"],
-.w-slider-arrow-right [class*=" w-icon-"] {
+.w-slider-arrow-left [class^='w-icon-'],
+.w-slider-arrow-right [class^='w-icon-'],
+.w-slider-arrow-left [class*=' w-icon-'],
+.w-slider-arrow-right [class*=' w-icon-'] {
   position: absolute;
 }
 .w-slider-arrow-left:focus,
@@ -1418,6 +1418,9 @@ textarea.w-select {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+.w-slider-force-show {
+  display: block !important;
 }
 .w-dropdown {
   display: inline-block;
@@ -2995,6 +2998,10 @@ textarea.w-select {
   margin-top: 29px;
   margin-bottom: 152px;
   margin-left: 5px;
+}
+
+.indentlink {
+  margin-left: 23px;
 }
 
 
