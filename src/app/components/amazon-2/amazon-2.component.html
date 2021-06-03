@@ -115,7 +115,7 @@
        <div class="explantion">
          The actual implementation of the test case is shown below: 
        </div> 
-       <img src="assets/images/RX001.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX001.png 500w, assets/images/RX001.png 800w, assets/images/RX001.png 1080w, assets/images/RX001.png 1600w, assets/images/RX001.png 2133w" alt="" class="t4"> 
+       <img src="assets/images/RX001.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX001-p-500.png 500w, assets/images/RX001-p-800.png 800w, assets/images/RX001-p-1080.png 1080w, assets/images/RX001-p-1600.png 1600w, assets/images/RX001.png 2133w" alt="" class="t4"> 
        <div class="explantion"><br>‍<br>Essentially, we have now expressed the top level methods for selecting three different types of rooms. But we haven't determined what a Room class is at this point, neither have we identified a Reservation class. This will come out in the implementation of the three methods identified above.<br>‍ 
        </div> 
       </div> 
@@ -125,25 +125,25 @@
          First and foremost, it assumes that the default constructor already has rooms available for rent. This is skipping ahead a little bit. Hence the first real test case is to add rooms to the FrontDesk object for it to select from. However, logically, a Front Desk in human terms is really a part of a Hotel class. As such it is logical to conclude that a Hotel has a FrontDesk but a FrontDesk may not have a Hotel. Such that, it could merely be a FrontDesk to some other type of building. So, to take into consideration the next programmer to have to maintain the code, we try to code in terms of human constructs, (that is, in ways that a non-programmer might think). 
        </div> 
        <div class="m1"> 
-        <img src="assets/images/RX001.png" sizes="(max-width: 479px) 100vw, 539px" srcset="assets/images/RX001.png 500w, assets/images/RX001.png 800w, assets/images/RX001.png 1080w, assets/images/RX001.png 1600w, assets/images/RX001.png 2133w" alt="" class="t4"> 
+        <img src="assets/images/RX001.png" sizes="(max-width: 479px) 100vw, 539px" srcset="assets/images/RX001-p-500.png 500w, assets/images/RX001-p-800.png 800w, assets/images/RX001-p-1080.png 1080w, assets/images/RX001-p-1600.png 1600w, assets/images/RX001.png 2133w" alt="" class="t4"> 
         <h5 class="h22">Right-click and "Save Image as ..." to get a better look at this image!</h5> 
        </div> 
        <div class="explantion">
          Hence the need for a Hotel class, (hence the advantage of writing our own interface to a Hotel allowing our code to be able to interface to currently existing systems). 
        </div> 
-       <img src="assets/images/RX003.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX003.png 500w, assets/images/RX003.png 800w, assets/images/RX003.png 1080w, assets/images/RX003.png 1331w" alt="" class="t4"> 
+       <img src="assets/images/RX003.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX003-p-500.png 500w, assets/images/RX003-p-800.png 800w, assets/images/RX003-p-1080.png 1080w, assets/images/RX003.png 1331w" alt="" class="t4"> 
        <div class="explantion bump">
          Also we write the test case for this interface: 
        </div> 
-       <img src="assets/images/RX002.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX002.png 500w, assets/images/RX002.png 800w, assets/images/RX002.png 1080w, assets/images/RX002.png 1529w" alt="" class="t4"> 
+       <img src="assets/images/RX002.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX002-p-500.png 500w, assets/images/RX002-p-800.png 800w, assets/images/RX002-p-1080.png 1080w, assets/images/RX002.png 1529w" alt="" class="t4"> 
        <div class="explantion bump">
          One of the advantages of writng new code with interfaces, (known as the Abstract Design Pattern in Gof), is that when it comes time to add this new code to an existing database all that is required is an implementation that can interact with the currently existing system. For now, we will implement our Hotel and Room classes with C++ STL constructs: 
        </div> 
-       <img src="assets/images/RX004.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX004.png 500w, assets/images/RX004.png 800w, assets/images/RX004.png 1080w, assets/images/RX004.png 1591w" alt="" class="t4"> 
+       <img src="assets/images/RX004.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX004-p-500.png 500w, assets/images/RX004-p-800.png 800w, assets/images/RX004-p-1080.png 1080w, assets/images/RX004.png 1591w" alt="" class="t4"> 
        <div class="explantion bump">
          To further demonstrate the advantages of programming with interfaces, let's assume that we have completed our new functionality and wish to connect the FrontDesk package to a typical (albeit complex) real world database that probably has been in service for a few years. The following is addictional class that bridge both worlds without breaking code in either source base: 
        </div> 
-       <img src="assets/images/RX005.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX005.png 500w, assets/images/RX005.png 800w, assets/images/RX005.png 1080w, assets/images/RX005.png 1656w" alt="" class="t4"> 
+       <img src="assets/images/RX005.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX005-p-500.png 500w, assets/images/RX005-p-800.png 800w, assets/images/RX005-p-1080.png 1080w, assets/images/RX005.png 1656w" alt="" class="t4"> 
        <div class="explantion bump">
          So this demonstrates one of the major advantages of using interfaces to link up with pre-exisitng systems and without too much fuss. 
        </div> 
@@ -157,22 +157,22 @@
        <div class="explantion">
          In the case of the Room class for the Hotel class, we want to be able to identify rooms. At least by using their traditional room numbers. For example, while our first test case allowed us to add a room to a hotel, removing a particular room would logically require a human readable room number. Hence our next test case draws upon both the need for a room number as well as shed light on how a hotel might keep track of available rooms vs. reserved rooms. 
        </div> 
-       <img src="assets/images/RX007.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX007.png 500w, assets/images/RX007.png 800w, assets/images/RX007.png 1080w, assets/images/RX007.png 1739w" alt="" class="t4"> 
+       <img src="assets/images/RX007.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX007-p-500.png 500w, assets/images/RX007-p-800.png 800w, assets/images/RX007-p-1080.png 1080w, assets/images/RX007.png 1739w" alt="" class="t4"> 
        <div class="explantion bump">
          Now upon piecing together this test case, it becomes obvious that changing the HotelInterface class to use the verbs 'reserve' is advantageous. But the logical inverse to reserving a room is the guest checkout process, hence if we use the 'checkin' verb instead of 'reserve' might make more sense. However, checking in and checking out a guest is typically a function of the clerk at the front desk. Not only that, but after a guest leaves the room the room itself is actually in need of cleaning. Moreover, what do you do if after booking a room but that the guest cancels at the last minute? 
        </div> 
-       <img src="assets/images/RX011.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX011.png 500w, assets/images/RX011.png 800w, assets/images/RX011.png 1080w, assets/images/RX011.png 1599w" alt="" class="t4"> 
+       <img src="assets/images/RX011.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX011-p-500.png 500w, assets/images/RX011-p-800.png 800w, assets/images/RX011-p-1080.png 1080w, assets/images/RX011.png 1599w" alt="" class="t4"> 
        <div class="explantion bump">
          By and large the Hotel instance is not really concerned with the type of room, just which rooms are currently available for new guests. 
        </div> 
-       <img src="assets/images/RX010.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX010.png 500w, assets/images/RX010.png 800w, assets/images/RX010.png 1080w, assets/images/RX010.png 1616w" alt="" class="t4"> 
+       <img src="assets/images/RX010.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX010-p-500.png 500w, assets/images/RX010-p-800.png 800w, assets/images/RX010-p-1080.png 1080w, assets/images/RX010.png 1616w" alt="" class="t4"> 
        <div class="explantion bump">
          All these considerations can be better named methods in the HotelInterface:. This is where Mocking frameworks come in really handy. As well, designing logical interfaces early in the software development process like this is more fun. 
        </div> 
        <div class="explantion">
          The second test case (below) shows a similar workflow to the natural reservation process except that in the latter case, the customer cancels the room. 
        </div> 
-       <img src="assets/images/RX030.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX030.png 500w, assets/images/RX030.png 800w, assets/images/RX030.png 1080w, assets/images/RX030.png 1773w" alt="" class="t4"> 
+       <img src="assets/images/RX030.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX030-p-500.png 500w, assets/images/RX030-p-800.png 800w, assets/images/RX030-p-1080.png 1080w, assets/images/RX030.png 1773w" alt="" class="t4"> 
        <a href="https://github.com/perriera/chessmind/blob/V1/include/chessmind/frontdesk/Hotel.hpp" target="_blank" class="w-inline-block"> 
         <div class="explantion bump">
           The source code for Hotel.hpp can be found here:<br></div> </a> 
@@ -187,34 +187,34 @@
        <div class="explantion">
          Up to this point we have assumed that a RoomKey will always be an integer. But what do we do if it turns out that the legacy system of Paris Hilton's fame likes to classify different types of rooms using a single letter in front? 
        </div> 
-       <img src="assets/images/RX012.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX012.png 500w, assets/images/RX012.png 800w, assets/images/RX012.png 1083w" alt="" class="t4"> 
+       <img src="assets/images/RX012.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX012-p-500.png 500w, assets/images/RX012-p-800.png 800w, assets/images/RX012.png 1083w" alt="" class="t4"> 
        <div class="explantion bump">
          Hence we make use of C++'s bells and whistles to allow the RoomKey to accept either long values or text strings in which case it'll simply convert it to a tradtional crc32 value for organizing purposes. 
        </div> 
-       <img src="assets/images/RX013.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX013.png 500w, assets/images/RX013.png 800w, assets/images/RX013.png 1080w, assets/images/RX013.png 1600w, assets/images/RX013.png 1831w" alt="" class="t4"> 
+       <img src="assets/images/RX013.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX013-p-500.png 500w, assets/images/RX013-p-800.png 800w, assets/images/RX013-p-1080.png 1080w, assets/images/RX013-p-1600.png 1600w, assets/images/RX013.png 1831w" alt="" class="t4"> 
        <a href="https://github.com/perriera/chessmind/blob/V1/include/chessmind/frontdesk/RoomKey.hpp" target="_blank" class="w-inline-block"> 
         <div class="explantion bump">
           The source code for RoomKey.hpp can be found here:<br></div> </a> 
        <div class="explantion">
          Now the above code can be enhanced to test for a particular syntax on the room number format. Another option would be to apply the GoF Decorator Design pattern whereby a derived class specializing in a particular room number format can be dedicated to test for particular syntax. 
        </div> 
-       <img src="assets/images/RX014.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX014.png 500w, assets/images/RX014.png 800w, assets/images/RX014.png 1080w, assets/images/RX014.png 1600w, assets/images/RX014.png 1938w" alt="" class="t4"> 
+       <img src="assets/images/RX014.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX014-p-500.png 500w, assets/images/RX014-p-800.png 800w, assets/images/RX014-p-1080.png 1080w, assets/images/RX014-p-1600.png 1600w, assets/images/RX014.png 1938w" alt="" class="t4"> 
        <div class="explantion bump">
          Where the actual syntax checking takes place in a dedicate exception class: 
        </div> 
-       <img src="assets/images/RX015.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX015.png 500w, assets/images/RX015.png 800w, assets/images/RX015.png 1080w, assets/images/RX015.png 1600w, assets/images/RX015.png 1930w" alt="" class="t4"> 
+       <img src="assets/images/RX015.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX015-p-500.png 500w, assets/images/RX015-p-800.png 800w, assets/images/RX015-p-1080.png 1080w, assets/images/RX015-p-1600.png 1600w, assets/images/RX015.png 1930w" alt="" class="t4"> 
        <div class="explantion bump">
          And we be sure to test it for basic functionality: 
        </div> 
-       <img src="assets/images/RX016.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX016.png 500w, assets/images/RX016.png 800w, assets/images/RX016.png 1080w, assets/images/RX016.png 1600w, assets/images/RX016.png 1820w" alt="" class="t4"> 
+       <img src="assets/images/RX016.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX016-p-500.png 500w, assets/images/RX016-p-800.png 800w, assets/images/RX016-p-1080.png 1080w, assets/images/RX016-p-1600.png 1600w, assets/images/RX016.png 1820w" alt="" class="t4"> 
        <div class="explantion bump">
          And in the event we want to add Delta hotel support: 
        </div> 
-       <img src="assets/images/RX017.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX017.png 500w, assets/images/RX017.png 800w, assets/images/RX017.png 1080w, assets/images/RX017.png 1678w" alt="" class="t4"> 
+       <img src="assets/images/RX017.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX017-p-500.png 500w, assets/images/RX017-p-800.png 800w, assets/images/RX017-p-1080.png 1080w, assets/images/RX017.png 1678w" alt="" class="t4"> 
        <div class="explantion bump">
          And we be sure to test it for Delta Hotel RoomKey format: 
        </div> 
-       <img src="assets/images/RX031.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX031.png 500w, assets/images/RX031.png 800w, assets/images/RX031.png 1080w, assets/images/RX031.png 1600w, assets/images/RX031.png 1910w" alt="" class="t4"> 
+       <img src="assets/images/RX031.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX031-p-500.png 500w, assets/images/RX031-p-800.png 800w, assets/images/RX031-p-1080.png 1080w, assets/images/RX031-p-1600.png 1600w, assets/images/RX031.png 1910w" alt="" class="t4"> 
        <a href="https://github.com/perriera/chessmind/tree/V1/include/chessmind/frontdesk/roomkeys" target="_blank" class="w-inline-block"> 
         <div class="explantion bump">
           The source code for unique RoomKey formats can be found here:<br></div> </a> 
@@ -224,11 +224,11 @@
        <div class="explantion">
          Our first kick at the can had us propose an interface like this: 
        </div> 
-       <img src="assets/images/RX020.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX020.png 500w, assets/images/RX020.png 800w, assets/images/RX020.png 1080w, assets/images/RX020.png 1699w" alt="" class="t4"> 
+       <img src="assets/images/RX020.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX020-p-500.png 500w, assets/images/RX020-p-800.png 800w, assets/images/RX020-p-1080.png 1080w, assets/images/RX020.png 1699w" alt="" class="t4"> 
        <div class="explantion bump">
          However, in light of the HotelInterface doing so much work for us, w e can leave the internal details of Room management elsewhere and just concentrate on the transaction at hand. Hence we play with a slightly different interface design inside the test case: 
        </div> 
-       <img src="assets/images/RX021.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX021.png 500w, assets/images/RX021.png 800w, assets/images/RX021.png 1080w, assets/images/RX021.png 1600w, assets/images/RX021.png 1902w" alt="" class="t4"> 
+       <img src="assets/images/RX021.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX021-p-500.png 500w, assets/images/RX021-p-800.png 800w, assets/images/RX021-p-1080.png 1080w, assets/images/RX021-p-1600.png 1600w, assets/images/RX021.png 1902w" alt="" class="t4"> 
        <div class="explantion bump">
          The above modification of the selectEconomyRoom method implies that a generica hotel would really not be the best place to determine if a given room is of a particular type. Given that common knowledge suggests that some hotel lines encode the type of room inside the room number key itself, it stands to reason then that we should supply different types of Hotel classes. 
        </div> 
@@ -240,31 +240,31 @@
         <strong>WHEN</strong> we need the same method on both intefaces 
         <strong>THEN</strong> we need to do is apply the Proxy Design Pattern. 
        </div> 
-       <img src="assets/images/RX022.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX022.png 500w, assets/images/RX022.png 800w, assets/images/RX022.png 1080w, assets/images/RX022.png 1355w" alt="" class="t4"> 
+       <img src="assets/images/RX022.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX022-p-500.png 500w, assets/images/RX022-p-800.png 800w, assets/images/RX022-p-1080.png 1080w, assets/images/RX022.png 1355w" alt="" class="t4"> 
        <div class="explantion bump">
          Such that both the FrontDeskInterface and the HotelInterface will both share methods that are declared as part of the RoomSelectionInterface: 
        </div> 
-       <img src="assets/images/RX023.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX023.png 500w, assets/images/RX023.png 800w, assets/images/RX023.png 1080w, assets/images/RX023.png 1399w" alt="" class="t4"> 
+       <img src="assets/images/RX023.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX023-p-500.png 500w, assets/images/RX023-p-800.png 800w, assets/images/RX023-p-1080.png 1080w, assets/images/RX023.png 1399w" alt="" class="t4"> 
        <div class="explantion bump">
          Now while this is a nice improvement, it stands to reason that the generic Hotel class is simply not in a good place to determine just what is a room type. For this, we are better off defining classes for each particular type of hotel, (even cheap hotels). 
        </div> 
-       <img src="assets/images/RX025.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX025.png 500w, assets/images/RX025.png 800w, assets/images/RX025.png 1080w, assets/images/RX025.png 1424w" alt="" class="t4"> 
+       <img src="assets/images/RX025.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX025-p-500.png 500w, assets/images/RX025-p-800.png 800w, assets/images/RX025-p-1080.png 1080w, assets/images/RX025.png 1424w" alt="" class="t4"> 
        <div class="explantion bump">
          Hence our initial room selection using the gemeric base class is to simplyy take the first available room. In a derived class, this method can be refined to look for room type information based on the contents of the RoomKey, (aka DeltaRoomKey). 
        </div> 
-       <img src="assets/images/RX033.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX033.png 500w, assets/images/RX033.png 800w, assets/images/RX033.png 1080w, assets/images/RX033.png 1600w, assets/images/RX033.png 1898w" alt="" class="t4"> 
+       <img src="assets/images/RX033.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX033-p-500.png 500w, assets/images/RX033-p-800.png 800w, assets/images/RX033-p-1080.png 1080w, assets/images/RX033-p-1600.png 1600w, assets/images/RX033.png 1898w" alt="" class="t4"> 
        <div class="explantion bump">
          Now that we have a dedicated spot for Delta hotels, we can safely express this logic for Delta room types where it makes sense, (and can be easily found again later). 
        </div> 
-       <img src="assets/images/RX027.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX027.png 500w, assets/images/RX027.png 800w, assets/images/RX027.png 1080w, assets/images/RX027.png 1758w" alt="" class="t4"> 
+       <img src="assets/images/RX027.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX027-p-500.png 500w, assets/images/RX027-p-800.png 800w, assets/images/RX027-p-1080.png 1080w, assets/images/RX027.png 1758w" alt="" class="t4"> 
        <div class="explantion bump">
          In the case of a cheap hotel, perhaps certain number ranges represent certain types of rooms, so we write the implementation for the CheapHotel class: 
        </div> 
-       <img src="assets/images/RX029.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX029.png 500w, assets/images/RX029.png 800w, assets/images/RX029.png 1080w, assets/images/RX029.png 1626w" alt="" class="t4"> 
+       <img src="assets/images/RX029.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX029-p-500.png 500w, assets/images/RX029-p-800.png 800w, assets/images/RX029-p-1080.png 1080w, assets/images/RX029.png 1626w" alt="" class="t4"> 
        <div class="explantion bump">
          The test case shows the difference in RoomKey type: 
        </div> 
-       <img src="assets/images/RX028.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX028.png 500w, assets/images/RX028.png 800w, assets/images/RX028.png 1080w, assets/images/RX028.png 1600w, assets/images/RX028.png 1890w" alt="" class="t4"> 
+       <img src="assets/images/RX028.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX028-p-500.png 500w, assets/images/RX028-p-800.png 800w, assets/images/RX028-p-1080.png 1080w, assets/images/RX028-p-1600.png 1600w, assets/images/RX028.png 1890w" alt="" class="t4"> 
        <div class="explantion bump">
          Now that a hotel can determine the different types of rooms it has based on the type of hotel that it is, we can now proceed with the next logical step in the FrontDesk customer 'checkin' process. 
        </div> 
@@ -274,11 +274,11 @@
        <div class="explantion">
          Now that the HotelInterface is resolving Rooms instances and Room type selections, all that remains for the FrontDeskInterface to do is coordinate the checkin process. 
        </div> 
-       <img src="assets/images/RX035.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX035.png 500w, assets/images/RX035.png 800w, assets/images/RX035.png 1080w, assets/images/RX035.png 1600w, assets/images/RX035.png 2000w, assets/images/RX035.png 2216w" alt="" class="t4"> 
+       <img src="assets/images/RX035.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX035-p-500.png 500w, assets/images/RX035-p-800.png 800w, assets/images/RX035-p-1080.png 1080w, assets/images/RX035-p-1600.png 1600w, assets/images/RX035-p-2000.png 2000w, assets/images/RX035.png 2216w" alt="" class="t4"> 
        <div class="explantion bump">
          Now the logical checkout method follows in kind: 
        </div> 
-       <img src="assets/images/RX036.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX036.png 500w, assets/images/RX036.png 800w, assets/images/RX036.png 1080w, assets/images/RX036.png 1600w, assets/images/RX036.png 2145w" alt="" class="t4"> 
+       <img src="assets/images/RX036.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX036-p-500.png 500w, assets/images/RX036-p-800.png 800w, assets/images/RX036-p-1080.png 1080w, assets/images/RX036-p-1600.png 1600w, assets/images/RX036.png 2145w" alt="" class="t4"> 
        <div class="explantion bump">
          So this is a basic introduction into how to form a simple application in C++ using interfaces, STL, Catch2 and a few GoF Design Patterns. Along with some syntax sugar borrowed from Java, we have a decent means by which to add new functionality to currently existing system. 
        </div> 
@@ -288,21 +288,38 @@
        <div class="explantion">
          While it is technically a work in progress, we are off to a good start with respect to the original objective of this application. The following interfaces are what have been developed so far. 
        </div> 
-       <img src="assets/images/RX037.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX037.png 500w, assets/images/RX037.png 800w, assets/images/RX037.png 1080w, assets/images/RX037.png 1637w" alt="" class="t4"> 
+       <img src="assets/images/RX040.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX040.png 500w, assets/images/RX040.png 800w, assets/images/RX040.png 1080w, assets/images/RX040.png 1599w" alt="" class="t4"> 
        <div class="explantion bump">
-         During the interview the interviewer wanted to add a last minute change. Rather than just have three types of rooms, what if we had no idea how many types of rooms a hotel might have. Hence we added the 'selectRoomType' method which uwas to use an int to identify, (at runtime) the different types of rooms a hotel could have. While we could have add that method here, it was left "where is, as is" just to show where additional functionality could be added. 
+         During the first Amazon interview the interviewer wanted to add a last minute change. Rather than just have three types of rooms, what if we had no idea how many types of rooms a hotel might have. But rather than put that method inside this interface, giving it it's own interface is cleaner and more logical. 
        </div> 
-       <img src="assets/images/RX038.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX038.png 500w, assets/images/RX038.png 800w, assets/images/RX038.png 1080w, assets/images/RX038.png 1764w" alt="" class="t4"> 
+       <img src="assets/images/RX041.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX041.png 500w, assets/images/RX041.png 800w, assets/images/RX041.png 1080w, assets/images/RX041.png 1559w" alt="" class="t4"> 
+       <div class="explantion bump">
+         In this manner we will be able to add the RoomTypeInterface without upsetting the clean design of the FrontDeskInterface. When you use a good mocking framework such as EranPeer's FakeIt, we can test individual interfaces before combining them with other interfaces as well as integration into an implementation. 
+       </div> 
+       <img src="assets/images/RX038.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX038-p-500.png 500w, assets/images/RX038-p-800.png 800w, assets/images/RX038-p-1080.png 1080w, assets/images/RX038.png 1764w" alt="" class="t4"> 
        <div class="explantion bump">
          The HotelInterface ended up taking the brunt of the classification logic and along with the RoomKey base class, allowed for easy adoption of various room types recognition via the format of a given room number. Complete with lots of places for expansion in the future. 
        </div> 
-       <img src="assets/images/RX039.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX039.png 500w, assets/images/RX039.png 800w, assets/images/RX039.png 1080w, assets/images/RX039.png 1382w" alt="" class="t4"> 
+       <img src="assets/images/RX039.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX039-p-500.png 500w, assets/images/RX039-p-800.png 800w, assets/images/RX039-p-1080.png 1080w, assets/images/RX039.png 1382w" alt="" class="t4"> 
        <div class="explantion bump">
          GIVEN that the HotelInterface had to handle these requests better than the original FrontDeskInterface, we added GoF Proxy Design Pattern here to keep the classes insync with each when different types of rooms were required. 
        </div> 
+       <a href="https://github.com/perriera/chessmind/tree/V1/include/chessmind/frontdesk" target="_blank" class="m22 w-inline-block"> 
+        <div class="explantion">
+          The header files code for FrontDesk can be found here:<br></div> </a> 
+       <a href="https://github.com/perriera/chessmind/tree/V1/src/frontdesk" target="_blank" class="m22 w-inline-block"> 
+        <div class="explantion">
+          The source files code for FrontDesk can be found here:<br></div> </a> 
+       <a href="https://github.com/perriera/chessmind/tree/V1/test" target="_blank" class="m22 w-inline-block"> 
+        <div class="explantion">
+          The test case files code for FrontDesk can be found here:<br></div> </a> 
+       <h4 class="h33">ChessMind</h4> 
+       <div class="explantion">
+         If you are wondering why I chose to include the FrontDesk project inside my ChessMind project it was largely because I'd like very much to show off my ChessMind project. As it is part of my Post Graduate program in Data Science with Purdue University. Where we focus on Machine Learning and AI as I have taken an interest putting together a LinearRegression engine to try and predict chess moves. With the complete history of every championship chess game ever played in by chess mind's like Gary Kasparov and Gary Fischer, it'll be interesting it TensorFlow can be used to predict chess moves in the tradiation of individual chess players. 
+       </div> 
        <h4 class="h33">Final thoughts</h4> 
        <div class="explantion">
-         Adding this section to my blog was a good investment of my time as it gave me an opportunity to demonstrate popular design and programming methods with respect to C++, STL, Catch2 and Gof Design Patterns. 
+         Adding this section to my blog was a good investment of my time as it gave me an opportunity to demonstrate popular design and programming methods with respect to C++, STL, Catch2, FakeIt and Gof Design Patterns. 
        </div> 
        <div class="explantion">
          One other thing to keep in mind however is to look out for brain freeze before an important interview. About a 1/2 hour before this interview I was handed a Tim Horton's Maple Ice Capp and perhaps this was the cause of me having recollection issues with respect to the HashMap class.<br><br><a target="_blank" href="https://www.youtube.com/watch?v=KwtcmEbbyeI" class="l99">Perhaps</a> ... 
@@ -314,25 +331,25 @@
        <div> 
         <div class="skills-chart address"> 
          <div class="text0 education">
-           Unified Objects, Inc. 
+           EXPARX INCORPORATED 
          </div> 
          <div class="text0 linkit"> 
-          <a target="_blank" href="http://www.unifiedobjects.com/">http://www.unifiedobjects.com/</a> 
+          <a target="_blank" href="https://www.exparx.com">https://www.exparx.com</a> 
          </div> 
          <div class="text0">
-           +1.(844) 440-7400 
+           (902) 202 6777 
          </div> 
          <div class="text0">
-           info@unifiedobjects.com 
+           perry@exparx.com 
          </div> 
          <div class="text0">
-           215 Water St 
+           379 Smith Street 
          </div> 
          <div class="text0">
-           St. John's, NL 
+           New Waterford, NS 
          </div> 
          <div class="text0 extra">
-           Canada 
+           Canada, B1H 3R3 
          </div> 
          <div> 
           <div class="w-form"> 
