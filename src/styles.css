@@ -2979,6 +2979,7 @@ textarea.w-select {
 }
 
 .h33 {
+  margin-top: 9px;
   margin-left: 4px;
 }
 
@@ -3006,7 +3007,19 @@ textarea.w-select {
 
 .m22 {
   margin-top: -10px;
-  margin-bottom: -10px;
+  margin-bottom: -17px;
+}
+
+.columns {
+  margin-bottom: 8px;
+}
+
+.div-block {
+  margin-bottom: 32px;
+}
+
+.div-block-2 {
+  margin-bottom: 28px;
 }
 
 
