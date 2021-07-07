@@ -2303,6 +2303,10 @@ textarea.w-select {
   color: #c69c6d;
 }
 
+.link1.hide {
+  display: none;
+}
+
 .image4.image5 {
   margin-left: 13px;
 }
@@ -2389,9 +2393,15 @@ textarea.w-select {
 }
 
 .text0.paragraph.t3 {
+  margin-top: 26px;
+  margin-bottom: 18px;
   color: #000;
   font-size: 17px;
   font-weight: 700;
+}
+
+.text0.paragraph.t3.txxx {
+  text-align: left;
 }
 
 .text0.quote-quote {
@@ -2914,6 +2924,7 @@ textarea.w-select {
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-size: 15px;
   line-height: 20px;
+  text-align: justify;
 }
 
 .explantion.code {
@@ -2972,7 +2983,7 @@ textarea.w-select {
 }
 
 .b1 {
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 .i33 {
@@ -3021,6 +3032,23 @@ textarea.w-select {
 
 .div-block-2 {
   margin-bottom: 28px;
+}
+
+.goft1 {
+  background-color: #d4da91;
+  color: #333;
+}
+
+.goft1.w--current {
+  background-color: #e3e9a0;
+}
+
+.goft2 {
+  background-color: #a6ac68;
+}
+
+.goft2.w--current {
+  background-color: #e3e9a0;
 }
 
 

@@ -1,0 +1,572 @@
+<div class="main-section"> 
+  <div class="side-menu"> 
+   <img src="assets/images/logo.png" alt="" class="image1" srcset=""> 
+   <div class="text1 text6 text7 text10 text11 text14">
+     WEB DESIGNER 
+   </div> 
+   <div class="text1 text6 text10">
+     PERRY ANDERSON 
+   </div> 
+   <a href="http://www.exparx.com/" target="_blank" class="link w-inline-block"> 
+    <div class="text1 text6 text7 text10 text11 text14 text40">
+      E X P A R X, I N C. 
+    </div> </a> 
+   <ul role="list" class="list0"> 
+    <li class="list1"> <a class="link1" routerLink="/">Perry Anderson</a> </li> 
+    <li> <a class="link1" routerLink="/portfolio">Portfolio</a> </li> 
+    <li> <a class="link1" routerLink="/story">My Story</a> </li> 
+    <li> <a aria-current="page" class="link1 hide w--current" routerLink="/gof_design_patterns">GoF Design Patterns</a> </li> 
+    <li> <a class="link1" routerLink="/best_practices_it">Best Practices, (IT)</a> </li> 
+    <li> <a class="link1" routerLink="/crc_32bit_collision">CRC 32bit Collision<br>‍</a> </li> 
+    <li> <a class="link1" routerLink="/bloomberg">Bloomberg Interview</a> </li> 
+    <li> <a class="link1" routerLink="/amazon">Amazon Interview</a> </li> 
+    <li> <a class="link1" routerLink="/amazon_2">Amazon Interview #2<br>‍</a> </li> 
+    <li> <a class="link1" routerLink="/privacy_policy">Privacy Policy</a> </li> 
+    <li> <a href="https://www.youtube.com/watch?v=BywDOO99Ia0" target="_blank" class="link1">Coffee Shop Music</a> </li> 
+    <li> <a class="link1" routerLink="/contact">Contact</a> </li> 
+   </ul> 
+  </div> 
+  <div class="right-area left-area"> 
+   <div> 
+    <div class="text0 large-caps">
+      Gang-of-Four 
+    </div> 
+    <div class="text0 large-caps">
+      Design Patterns 
+    </div> 
+    <div class="text0 paragraph t3">
+      This is a reflection of my knowledge of popular Design Patterns used in the software development industry. 
+    </div> 
+    <div class="explantion highlight"> 
+     <strong><em>Design Patterns: Elements of Reusable Object-Oriented Software</em> (1994) is a </strong> 
+     <a href="https://en.wikipedia.org/wiki/Software_engineering"><strong>software engineering</strong></a> 
+     <strong> book describing </strong> 
+     <a href="https://en.wikipedia.org/wiki/Software_design_pattern"><strong>software design patterns</strong></a> 
+     <strong>. The book was written by </strong> 
+     <a href="https://en.wikipedia.org/wiki/Erich_Gamma"><strong>Erich Gamma</strong></a> 
+     <strong>, </strong> 
+     <a href="https://wiki.c2.com/?RichardHelm" target="_blank"><strong>Richard Helm</strong></a> 
+     <strong>, </strong> 
+     <a href="https://en.wikipedia.org/wiki/Ralph_Johnson_(computer_scientist)"><strong>Ralph Johnson</strong></a> 
+     <strong>, and </strong> 
+     <a href="https://en.wikipedia.org/wiki/John_Vlissides"><strong>John Vlissides</strong></a> 
+     <strong>, with a foreword by </strong> 
+     <a href="https://en.wikipedia.org/wiki/Grady_Booch"><strong>Grady Booch</strong></a> 
+     <strong>. (</strong> 
+     <a href="https://www.amazon.ca/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612" target="_blank"><strong>Available on Amazon</strong></a> 
+     <strong>)</strong> 
+    </div> 
+    <div class="explantion">
+      To be knowledgable in Design Patterns makes all the difference when solving problems in your work experence as well as being able to be a guide to help others solve similar issues in your work environment. If I had a dollar for how many times I've been asked about different Design Patterns, I'd be rich. So, I have decided to add this to my blog for the benefit of anyone reading this that they might find GoF Design Patterns useful in their applications as well. 
+    </div> 
+    <div class="explantion highlight"> 
+     <strong>GIVEN</strong> that we need to design software without re-inventing the wheel<br><strong>WHEN</strong> a new application requires design similar to something done before<br><strong>THEN</strong> we inquire into the GoF Design Patterns and pick out a best fit. 
+    </div> 
+    <div class="explantion">
+      The formal 
+     <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank">Wikipedia entry for GoF: Design Patterns</a> can be found 
+     <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank">here</a>. But we are going to explore each and every given design pattern and express them in layman's terms for the benefit of the reader. Who may have only beginner or intermediate knowledge of Design Patterns as well as when and how to use them. Mind you, this is not intended to be an exhastive description of each design pattern, just my opinion their invdividual uses and best practices, (as the book tends to be too descriptive in it's explanation of each, in my humble opinion). 
+    </div> 
+    <div class="explantion">
+      Now in the following coding examples you maybe saying to yourself that that does not look like generic C++. That's because it's not. It is borrowing some syntax sugar from Java, (for the benefit of the reader). 
+    </div> 
+    <div class="explantion code"><br>#define interface struct<br>#define pure = 0<br>#define implements : public<br>#define extends : public<br>‍ 
+    </div> 
+    <div class="explantion">
+      Now GoF Design Patterns are grouped into three catagories, Creational, Structural and Behaviorial. Inside each of these three catagories there maybe between five to eleven individual design patterns each. 
+    </div> 
+    <div class="text0 paragraph t3">
+      GoF: Design Patterns, Gamma, Helm, Johnson, Vlissides (1994) 
+    </div> 
+    <div data-duration-in="300" data-duration-out="100" class="w-tabs"> 
+     <div class="w-tab-menu"> 
+      <a data-w-tab="Tab 1" class="goft1 w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==1}" (click)="selector1=1"> 
+       <div>
+         Creational 
+       </div> </a> 
+      <a data-w-tab="Tab 2" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==2}" (click)="selector1=2"> 
+       <div>
+         Structural 
+       </div> </a> 
+      <a data-w-tab="Tab 3" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==3}" (click)="selector1=3"> 
+       <div>
+         Behavioral 
+       </div> </a> 
+     </div> 
+     <div class="w-tab-content"> 
+      <div data-w-tab="Tab 1" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==1}" [hidden]="selector1==1"> 
+       <div data-duration-in="300" data-duration-out="100" class="b1 w-tabs"> 
+        <div class="w-tab-menu"> 
+         <a data-w-tab="Tab 1" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector2==1}" (click)="selector2=1"> 
+          <div>
+            Abstract Factory 
+          </div> </a> 
+         <a data-w-tab="Tab 2" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector2==2}" (click)="selector2=2"> 
+          <div>
+            Builder 
+          </div> </a> 
+         <a data-w-tab="Tab 3" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector2==3}" (click)="selector2=3"> 
+          <div>
+            Factory Method 
+          </div> </a> 
+         <a data-w-tab="Tab 4" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector2==4}" (click)="selector2=4"> 
+          <div>
+            Prototype 
+          </div> </a> 
+         <a data-w-tab="Tab 5" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector2==5}" (click)="selector2=5"> 
+          <div>
+            Singleton 
+          </div> </a> 
+         <a data-w-tab="Tab 6" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector2==6}" (click)="selector2=6"> 
+          <div>
+            #6 
+          </div> </a> 
+         <a data-w-tab="Tab 7" class="goft1 w-inline-block w-tab-link " [ngClass]="{'w--current' : selector2==7}" (click)="selector2=7"> 
+          <div>
+            #7 
+          </div> </a> 
+        </div> 
+        <div class="w-tab-content"> 
+         <div data-w-tab="Tab 1" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector2==1}" [hidden]="selector2==1"> 
+          <h4 class="h33">In a situation like this we write a simple Test Case</h4> 
+          <div class="explantion">
+            Converting the Sprint Given-When-Then statement into a Catch2 style test case is usually a good approach. So we set up a series of theorectical interactions between a perspective customer and the person behind the counter trying to use the system to book a type of room. 
+          </div> 
+          <div class="explantion code"><br>SCENARIO("Verify FrontDesk", "[FrontDesk]")<br>{{"{"}}<br></div> 
+          <div class="explantion code indented">
+            GIVEN("that a hotel needs to reserve different types of rooms")<br>WHEN("a customer shows up at the hotel and asks for a room")<br>THEN("we inquire into the system the availability of that type of room.") {{"{"}} 
+          </div> 
+          <div class="explantion code indented indented2">
+            FrontDesk frontDesk;<br>frontDesk.listRooms();<br>auto economy = frontDesk.selectEconomyRoom();<br>auto standard = frontDesk.selectMediumRoom();<br>auto luxury = frontDesk.selectExpensiveRoom(); 
+          </div> 
+          <div class="explantion code indented">
+            {{"}"}} 
+          </div> 
+          <div class="explantion code">
+            {{"}"}}<br>‍<br></div> 
+          <div class="explantion">
+            The actual implementation of the test case is shown below: 
+          </div> 
+          <img src="assets/images/RX001.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX001-p-500.png 500w, assets/images/RX001-p-800.png 800w, assets/images/RX001-p-1080.png 1080w, assets/images/RX001-p-1600.png 1600w, assets/images/RX001.png 2133w" alt="" class="t4"> 
+          <div class="explantion"><br>‍<br>Essentially, we have now expressed the top level methods for selecting three different types of rooms. But we haven't determined what a Room class is at this point, neither have we identified a Reservation class. This will come out in the implementation of the three methods identified above.<br>‍ 
+          </div> 
+         </div> 
+         <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector2==2}" [hidden]="selector2==2"> 
+          <h4 class="h33">The first test case makes assumptions...</h4> 
+          <div class="explantion">
+            First and foremost, it assumes that the default constructor already has rooms available for rent. This is skipping ahead a little bit. Hence the first real test case is to add rooms to the FrontDesk object for it to select from. However, logically, a Front Desk in human terms is really a part of a Hotel class. As such it is logical to conclude that a Hotel has a FrontDesk but a FrontDesk may not have a Hotel. Such that, it could merely be a FrontDesk to some other type of building. So, to take into consideration the next programmer to have to maintain the code, we try to code in terms of human constructs, (that is, in ways that a non-programmer might think). 
+          </div> 
+          <div class="m1"> 
+           <img src="assets/images/RX001.png" sizes="(max-width: 479px) 100vw, 539px" srcset="assets/images/RX001-p-500.png 500w, assets/images/RX001-p-800.png 800w, assets/images/RX001-p-1080.png 1080w, assets/images/RX001-p-1600.png 1600w, assets/images/RX001.png 2133w" alt="" class="t4"> 
+           <h5 class="h22">Right-click and "Save Image as ..." to get a better look at this image!</h5> 
+          </div> 
+          <div class="explantion">
+            Hence the need for a Hotel class, (hence the advantage of writing our own interface to a Hotel allowing our code to be able to interface to currently existing systems). 
+          </div> 
+          <img src="assets/images/RX003.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX003-p-500.png 500w, assets/images/RX003-p-800.png 800w, assets/images/RX003-p-1080.png 1080w, assets/images/RX003.png 1331w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Also we write the test case for this interface: 
+          </div> 
+          <img src="assets/images/RX002.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX002-p-500.png 500w, assets/images/RX002-p-800.png 800w, assets/images/RX002-p-1080.png 1080w, assets/images/RX002.png 1529w" alt="" class="t4"> 
+          <div class="explantion bump">
+            One of the advantages of writng new code with interfaces, (known as the Abstract Design Pattern in Gof), is that when it comes time to add this new code to an existing database all that is required is an implementation that can interact with the currently existing system. For now, we will implement our Hotel and Room classes with C++ STL constructs: 
+          </div> 
+          <img src="assets/images/RX004.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX004-p-500.png 500w, assets/images/RX004-p-800.png 800w, assets/images/RX004-p-1080.png 1080w, assets/images/RX004.png 1591w" alt="" class="t4"> 
+          <div class="explantion bump">
+            To further demonstrate the advantages of programming with interfaces, let's assume that we have completed our new functionality and wish to connect the FrontDesk package to a typical (albeit complex) real world database that probably has been in service for a few years. The following is addictional class that bridge both worlds without breaking code in either source base: 
+          </div> 
+          <img src="assets/images/RX005.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX005-p-500.png 500w, assets/images/RX005-p-800.png 800w, assets/images/RX005-p-1080.png 1080w, assets/images/RX005.png 1656w" alt="" class="t4"> 
+          <div class="explantion bump">
+            So this demonstrates one of the major advantages of using interfaces to link up with pre-exisitng systems and without too much fuss. 
+          </div> 
+          <div class="m1"></div> 
+         </div> 
+         <div data-w-tab="Tab 3" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector2==3}" [hidden]="selector2==3"> 
+          <h4 class="h33">Organizing the Rooms...</h4> 
+          <div class="explantion">
+            It is advantageous to organize your C++ code in terms of everyday terminology. In this way, you can solite help from subject matter experts better, using the age old English language). Hence, the more human readable your code, the easier it is for both yourself and your colleagues to contribute to it's success. 
+          </div> 
+          <div class="explantion">
+            In the case of the Room class for the Hotel class, we want to be able to identify rooms. At least by using their traditional room numbers. For example, while our first test case allowed us to add a room to a hotel, removing a particular room would logically require a human readable room number. Hence our next test case draws upon both the need for a room number as well as shed light on how a hotel might keep track of available rooms vs. reserved rooms. 
+          </div> 
+          <img src="assets/images/RX007.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX007-p-500.png 500w, assets/images/RX007-p-800.png 800w, assets/images/RX007-p-1080.png 1080w, assets/images/RX007.png 1739w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Now upon piecing together this test case, it becomes obvious that changing the HotelInterface class to use the verbs 'reserve' is advantageous. But the logical inverse to reserving a room is the guest checkout process, hence if we use the 'checkin' verb instead of 'reserve' might make more sense. However, checking in and checking out a guest is typically a function of the clerk at the front desk. Not only that, but after a guest leaves the room the room itself is actually in need of cleaning. Moreover, what do you do if after booking a room but that the guest cancels at the last minute? 
+          </div> 
+          <img src="assets/images/RX011.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX011-p-500.png 500w, assets/images/RX011-p-800.png 800w, assets/images/RX011-p-1080.png 1080w, assets/images/RX011.png 1599w" alt="" class="t4"> 
+          <div class="explantion bump">
+            By and large the Hotel instance is not really concerned with the type of room, just which rooms are currently available for new guests. 
+          </div> 
+          <img src="assets/images/RX010.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX010-p-500.png 500w, assets/images/RX010-p-800.png 800w, assets/images/RX010-p-1080.png 1080w, assets/images/RX010.png 1616w" alt="" class="t4"> 
+          <div class="explantion bump">
+            All these considerations can be better named methods in the HotelInterface:. This is where Mocking frameworks come in really handy. As well, designing logical interfaces early in the software development process like this is more fun. 
+          </div> 
+          <div class="explantion">
+            The second test case (below) shows a similar workflow to the natural reservation process except that in the latter case, the customer cancels the room. 
+          </div> 
+          <img src="assets/images/RX030.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX030-p-500.png 500w, assets/images/RX030-p-800.png 800w, assets/images/RX030-p-1080.png 1080w, assets/images/RX030.png 1773w" alt="" class="t4"> 
+          <a href="https://github.com/perriera/chessmind/blob/V1/include/chessmind/frontdesk/Hotel.hpp" target="_blank" class="w-inline-block"> 
+           <div class="explantion bump">
+             The source code for Hotel.hpp can be found here:<br></div> </a> 
+          <div class="explantion">
+            Further, an added advantage to using interfaces in C++ is that the moment you change the interface itself, all C++ code related to changes are instantly detected by the C++ complier. Hence, you can make all the necessary changes in advance and safely from inside logical arranged test cases.<br></div> 
+         </div> 
+         <div data-w-tab="Tab 4" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector2==4}" [hidden]="selector2==4"> 
+          <h4 class="h33">Encapsulating the RoomKey</h4> 
+          <div class="explantion">
+            The C++ STL makes life so much easier when it comes to simple applications such as described here. However, it doesn't takes an experienced mind to know that no two hotel chains are the same when it comes to room numbers. Hence, we are encouraged to setup a class to encapsulate this behavioir in our design. 
+          </div> 
+          <div class="explantion">
+            Up to this point we have assumed that a RoomKey will always be an integer. But what do we do if it turns out that the legacy system of Paris Hilton's fame likes to classify different types of rooms using a single letter in front? 
+          </div> 
+          <img src="assets/images/RX012.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX012-p-500.png 500w, assets/images/RX012-p-800.png 800w, assets/images/RX012.png 1083w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Hence we make use of C++'s bells and whistles to allow the RoomKey to accept either long values or text strings in which case it'll simply convert it to a tradtional crc32 value for organizing purposes. 
+          </div> 
+          <img src="assets/images/RX013.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX013-p-500.png 500w, assets/images/RX013-p-800.png 800w, assets/images/RX013-p-1080.png 1080w, assets/images/RX013-p-1600.png 1600w, assets/images/RX013.png 1831w" alt="" class="t4"> 
+          <a href="https://github.com/perriera/chessmind/blob/V1/include/chessmind/frontdesk/RoomKey.hpp" target="_blank" class="w-inline-block"> 
+           <div class="explantion bump">
+             The source code for RoomKey.hpp can be found here:<br></div> </a> 
+          <div class="explantion">
+            Now the above code can be enhanced to test for a particular syntax on the room number format. Another option would be to apply the GoF Decorator Design pattern whereby a derived class specializing in a particular room number format can be dedicated to test for particular syntax. 
+          </div> 
+          <img src="assets/images/RX014.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX014-p-500.png 500w, assets/images/RX014-p-800.png 800w, assets/images/RX014-p-1080.png 1080w, assets/images/RX014-p-1600.png 1600w, assets/images/RX014.png 1938w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Where the actual syntax checking takes place in a dedicate exception class: 
+          </div> 
+          <img src="assets/images/RX015.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX015-p-500.png 500w, assets/images/RX015-p-800.png 800w, assets/images/RX015-p-1080.png 1080w, assets/images/RX015-p-1600.png 1600w, assets/images/RX015.png 1930w" alt="" class="t4"> 
+          <div class="explantion bump">
+            And we be sure to test it for basic functionality: 
+          </div> 
+          <img src="assets/images/RX016.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX016-p-500.png 500w, assets/images/RX016-p-800.png 800w, assets/images/RX016-p-1080.png 1080w, assets/images/RX016-p-1600.png 1600w, assets/images/RX016.png 1820w" alt="" class="t4"> 
+          <div class="explantion bump">
+            And in the event we want to add Delta hotel support: 
+          </div> 
+          <img src="assets/images/RX017.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX017-p-500.png 500w, assets/images/RX017-p-800.png 800w, assets/images/RX017-p-1080.png 1080w, assets/images/RX017.png 1678w" alt="" class="t4"> 
+          <div class="explantion bump">
+            And we be sure to test it for Delta Hotel RoomKey format: 
+          </div> 
+          <img src="assets/images/RX031.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX031-p-500.png 500w, assets/images/RX031-p-800.png 800w, assets/images/RX031-p-1080.png 1080w, assets/images/RX031-p-1600.png 1600w, assets/images/RX031.png 1910w" alt="" class="t4"> 
+          <a href="https://github.com/perriera/chessmind/tree/V1/include/chessmind/frontdesk/roomkeys" target="_blank" class="w-inline-block"> 
+           <div class="explantion bump">
+             The source code for unique RoomKey formats can be found here:<br></div> </a> 
+         </div> 
+         <div data-w-tab="Tab 5" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector2==5}" [hidden]="selector2==5"> 
+          <h4 class="h33">Re-evaluating FrontDeskInterface</h4> 
+          <div class="explantion">
+            Our first kick at the can had us propose an interface like this: 
+          </div> 
+          <img src="assets/images/RX020.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX020-p-500.png 500w, assets/images/RX020-p-800.png 800w, assets/images/RX020-p-1080.png 1080w, assets/images/RX020.png 1699w" alt="" class="t4"> 
+          <div class="explantion bump">
+            However, in light of the HotelInterface doing so much work for us, w e can leave the internal details of Room management elsewhere and just concentrate on the transaction at hand. Hence we play with a slightly different interface design inside the test case: 
+          </div> 
+          <img src="assets/images/RX021.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX021-p-500.png 500w, assets/images/RX021-p-800.png 800w, assets/images/RX021-p-1080.png 1080w, assets/images/RX021-p-1600.png 1600w, assets/images/RX021.png 1902w" alt="" class="t4"> 
+          <div class="explantion bump">
+            The above modification of the selectEconomyRoom method implies that a generica hotel would really not be the best place to determine if a given room is of a particular type. Given that common knowledge suggests that some hotel lines encode the type of room inside the room number key itself, it stands to reason then that we should supply different types of Hotel classes. 
+          </div> 
+          <div class="explantion">
+            Naturally, smaller motels and hotels probably only use a basic numbering system but that being said, they might internally have certain number ranges to represent different types of rooms. 
+          </div> 
+          <div class="explantion highlight"> 
+           <strong>GIVEN</strong> the FrontDesk implementation will prefer the 'selectEconomyRoom' request be deferred to the Hotel instance 
+           <strong>WHEN</strong> we need the same method on both intefaces 
+           <strong>THEN</strong> we need to do is apply the Proxy Design Pattern. 
+          </div> 
+          <img src="assets/images/RX022.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX022-p-500.png 500w, assets/images/RX022-p-800.png 800w, assets/images/RX022-p-1080.png 1080w, assets/images/RX022.png 1355w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Such that both the FrontDeskInterface and the HotelInterface will both share methods that are declared as part of the RoomSelectionInterface: 
+          </div> 
+          <img src="assets/images/RX023.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX023-p-500.png 500w, assets/images/RX023-p-800.png 800w, assets/images/RX023-p-1080.png 1080w, assets/images/RX023.png 1399w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Now while this is a nice improvement, it stands to reason that the generic Hotel class is simply not in a good place to determine just what is a room type. For this, we are better off defining classes for each particular type of hotel, (even cheap hotels). 
+          </div> 
+          <img src="assets/images/RX025.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX025-p-500.png 500w, assets/images/RX025-p-800.png 800w, assets/images/RX025-p-1080.png 1080w, assets/images/RX025.png 1424w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Hence our initial room selection using the gemeric base class is to simplyy take the first available room. In a derived class, this method can be refined to look for room type information based on the contents of the RoomKey, (aka DeltaRoomKey). 
+          </div> 
+          <img src="assets/images/RX033.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX033-p-500.png 500w, assets/images/RX033-p-800.png 800w, assets/images/RX033-p-1080.png 1080w, assets/images/RX033-p-1600.png 1600w, assets/images/RX033.png 1898w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Now that we have a dedicated spot for Delta hotels, we can safely express this logic for Delta room types where it makes sense, (and can be easily found again later). 
+          </div> 
+          <img src="assets/images/RX027.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX027-p-500.png 500w, assets/images/RX027-p-800.png 800w, assets/images/RX027-p-1080.png 1080w, assets/images/RX027.png 1758w" alt="" class="t4"> 
+          <div class="explantion bump">
+            In the case of a cheap hotel, perhaps certain number ranges represent certain types of rooms, so we write the implementation for the CheapHotel class: 
+          </div> 
+          <img src="assets/images/RX029.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX029-p-500.png 500w, assets/images/RX029-p-800.png 800w, assets/images/RX029-p-1080.png 1080w, assets/images/RX029.png 1626w" alt="" class="t4"> 
+          <div class="explantion bump">
+            The test case shows the difference in RoomKey type: 
+          </div> 
+          <img src="assets/images/RX028.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX028-p-500.png 500w, assets/images/RX028-p-800.png 800w, assets/images/RX028-p-1080.png 1080w, assets/images/RX028-p-1600.png 1600w, assets/images/RX028.png 1890w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Now that a hotel can determine the different types of rooms it has based on the type of hotel that it is, we can now proceed with the next logical step in the FrontDesk customer 'checkin' process. 
+          </div> 
+         </div> 
+         <div data-w-tab="Tab 6" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector2==6}" [hidden]="selector2==6"> 
+          <h4 class="h33">Performing a checkin operation</h4> 
+          <div class="explantion">
+            Now that the HotelInterface is resolving Rooms instances and Room type selections, all that remains for the FrontDeskInterface to do is coordinate the checkin process. 
+          </div> 
+          <img src="assets/images/RX035.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX035-p-500.png 500w, assets/images/RX035-p-800.png 800w, assets/images/RX035-p-1080.png 1080w, assets/images/RX035-p-1600.png 1600w, assets/images/RX035-p-2000.png 2000w, assets/images/RX035.png 2216w" alt="" class="t4"> 
+          <div class="explantion bump">
+            Now the logical checkout method follows in kind: 
+          </div> 
+          <img src="assets/images/RX036.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX036-p-500.png 500w, assets/images/RX036-p-800.png 800w, assets/images/RX036-p-1080.png 1080w, assets/images/RX036-p-1600.png 1600w, assets/images/RX036.png 2145w" alt="" class="t4"> 
+          <div class="explantion bump">
+            So this is a basic introduction into how to form a simple application in C++ using interfaces, STL, Catch2 and a few GoF Design Patterns. Along with some syntax sugar borrowed from Java, we have a decent means by which to add new functionality to currently existing system. 
+          </div> 
+         </div> 
+         <div data-w-tab="Tab 7" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector2==7}" [hidden]="selector2==7"> 
+          <h4 class="h33">FrontDeskInterface</h4> 
+          <div class="explantion">
+            While it is technically a work in progress, we are off to a good start with respect to the original objective of this application. The following interfaces are what have been developed so far. 
+          </div> 
+          <img src="assets/images/RX040.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX040-p-500.png 500w, assets/images/RX040-p-800.png 800w, assets/images/RX040-p-1080.png 1080w, assets/images/RX040.png 1599w" alt="" class="t4"> 
+          <div class="explantion bump">
+            During the first Amazon interview the interviewer wanted to add a last minute change. Rather than just have three types of rooms, what if we had no idea how many types of rooms a hotel might have. But rather than put that method inside this interface, giving it it's own interface is cleaner and more logical. 
+          </div> 
+          <img src="assets/images/RX041.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX041-p-500.png 500w, assets/images/RX041-p-800.png 800w, assets/images/RX041-p-1080.png 1080w, assets/images/RX041.png 1559w" alt="" class="t4"> 
+          <div class="explantion bump">
+            In this manner we will be able to add the RoomTypeInterface without upsetting the clean design of the FrontDeskInterface. When you use a good mocking framework such as EranPeer's FakeIt, we can test individual interfaces before combining them with other interfaces as well as integration into an implementation. 
+          </div> 
+          <img src="assets/images/RX038.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX038-p-500.png 500w, assets/images/RX038-p-800.png 800w, assets/images/RX038-p-1080.png 1080w, assets/images/RX038.png 1764w" alt="" class="t4"> 
+          <div class="explantion bump">
+            The HotelInterface ended up taking the brunt of the classification logic and along with the RoomKey base class, allowed for easy adoption of various room types recognition via the format of a given room number. Complete with lots of places for expansion in the future. 
+          </div> 
+          <img src="assets/images/RX039.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/RX039-p-500.png 500w, assets/images/RX039-p-800.png 800w, assets/images/RX039-p-1080.png 1080w, assets/images/RX039.png 1382w" alt="" class="t4"> 
+          <div class="explantion bump">
+            GIVEN that the HotelInterface had to handle these requests better than the original FrontDeskInterface, we added GoF Proxy Design Pattern here to keep the classes insync with each when different types of rooms were required. 
+          </div> 
+          <a href="https://github.com/perriera/chessmind/tree/V1/include/chessmind/frontdesk" target="_blank" class="m22 w-inline-block"> 
+           <div class="explantion">
+             The header files code for FrontDesk can be found here<br></div> </a> 
+          <a href="https://github.com/perriera/chessmind/tree/V1/src/frontdesk" target="_blank" class="m22 w-inline-block"> 
+           <div class="explantion">
+             The source files code for FrontDesk can be found here 
+           </div> </a> 
+          <a href="https://github.com/perriera/chessmind/tree/V1/test" target="_blank" class="m22 w-inline-block"> 
+           <div class="explantion">
+             The test case files code for FrontDesk can be found here 
+           </div> </a> 
+          <div class="div-block"></div> 
+          <div class="explantion highlight"> 
+           <strong>The ChessMind Open Source Project<br>‍</strong><br>If you are wondering why I chose to include the FrontDesk project inside my ChessMind project it was largely because I'd like very much to show off my ChessMind project. As it is part of my Post Graduate program in Data Science with Purdue University. Where we focus on Machine Learning and AI as I have taken an interest putting together a LinearRegression engine to try and predict chess moves. With the complete history of every championship chess game ever played in by chess mind's like Gary Kasparov and Gary Fischer, it'll be interesting to see if TensorFlow and Deep Learning methods can be used to predict chess moves in the tradiation of individual chess players using nVidia's GPU on your typical laptop. 
+          </div> 
+          <div class="columns w-row"> 
+           <div class="w-col w-col-4"> 
+            <img src="assets/images/001.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 543px, 167.6666717529297px" srcset="assets/images/001-p-500.png 500w, assets/images/001-p-800.png 800w, assets/images/001-p-1080.png 1080w, assets/images/001.png 1399w" alt=""> 
+           </div> 
+           <div class="w-col w-col-4"> 
+            <img src="assets/images/007.png" loading="lazy" sizes="(max-width: 530px) 100vw, (max-width: 767px) 530px, 167.66665649414062px" srcset="assets/images/007-p-500.png 500w, assets/images/007.png 530w" alt=""> 
+           </div> 
+           <div class="w-col w-col-4"> 
+            <img src="assets/images/003.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 543px, 167.6666717529297px" srcset="assets/images/003-p-500.png 500w, assets/images/003-p-800.png 800w, assets/images/003.png 1399w" alt=""> 
+           </div> 
+          </div> 
+          <a href="https://github.com/perriera/chessmind" target="_blank" class="m22 w-inline-block"> 
+           <div class="explantion">
+             The complete source code for the ChessMind Open Source Project can be found here<br></div> </a> 
+          <div class="div-block-2"></div> 
+          <h4 class="h33">Final thoughts</h4> 
+          <div class="explantion">
+            Adding this section to my blog was a good investment of my time as it gave me an opportunity to demonstrate popular design and programming methods with respect to C++, STL, Catch2, FakeIt and Gof Design Patterns. 
+          </div> 
+          <div class="explantion">
+            One other thing to keep in mind however is to look out for brain freeze before an important interview. About a 1/2 hour before this interview I was handed a Tim Horton's Maple Ice Capp and perhaps this was the cause of me having recollection issues with respect to the HashMap class.<br><br><a target="_blank" href="https://www.youtube.com/watch?v=KwtcmEbbyeI" class="l99">Perhaps</a> ... 
+          </div> 
+          <div class="explantion"> 
+           <a target="_blank" href="https://www.youtube.com/watch?v=YQs6IC-vgmo" class="l99">Why you should avoid Linked Lists, Bjarne Stroustrup<br></a> 
+           <a target="_blank" href="https://channel9.msdn.com/Events/GoingNative/GoingNative-2012/Keynote-Bjarne-Stroustrup-Cpp11-Style" class="l99">Day 1 Keynote, Bjarne Stroustrup: C++11 Style</a><br><br>What you have seen here is a typical day in software development for me. You utilize the tools you have available combined with what you understand as current and correct feedback. 
+          </div> 
+          <div> 
+           <div class="skills-chart address"> 
+            <div class="text0 education">
+              EXPARX INCORPORATED 
+            </div> 
+            <div class="text0 linkit"> 
+             <a target="_blank" href="https://www.exparx.com">https://www.exparx.com</a> 
+            </div> 
+            <div class="text0">
+              (902) 202 6777 
+            </div> 
+            <div class="text0">
+              perry@exparx.com 
+            </div> 
+            <div class="text0">
+              379 Smith Street 
+            </div> 
+            <div class="text0">
+              New Waterford, NS 
+            </div> 
+            <div class="text0 extra">
+              Canada, B1H 3R3 
+            </div> 
+            <div> 
+             <div class="w-form"> 
+  
+  <form
+     id="email-form"
+     name="email-form">
+
+               <div class="d1"> 
+  
+  <input
+     type="text"
+     class="e1 w-input"
+     autofocus="true"
+     maxlength="256"
+     name="Name-3"
+     placeholder="NAME"
+     id="Name-3"
+     required>
+
+               </div> 
+               <div class="d1 d2 text0"> 
+  
+  <input
+     type="email"
+     id="Email-3"
+     name="Email-3"
+     placeholder="EMAIL"
+     maxlength="256"
+     class="e1 e2 w-input"
+     required>
+
+               </div> 
+               <div class="d1 d2 d3"> 
+  
+  <textarea
+     id="Message-3"
+     name="Message-3"
+     placeholder="MESSAGE"
+     maxlength="5000"
+     data-name="Message 3"
+     class="e1 e2 e3 text0 w-input"
+     required>
+
+                </textarea> 
+               </div> 
+               <input type="submit" value="SEND" class="div2 s3 w-button"> 
+              </form> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==2}" [hidden]="selector1==2"> 
+       <div data-duration-in="300" data-duration-out="100" class="w-tabs"> 
+        <div class="w-tab-menu"> 
+         <a data-w-tab="Tab 1" class="goft1 w-inline-block w-tab-link " [ngClass]="{'w--current' : selector3==1}" (click)="selector3=1"> 
+          <div>
+            Adapter 
+          </div> </a> 
+         <a data-w-tab="Tab 2" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector3==2}" (click)="selector3=2"> 
+          <div>
+            Bridge 
+          </div> </a> 
+         <a data-w-tab="Tab 3" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector3==3}" (click)="selector3=3"> 
+          <div>
+            Composite 
+          </div> </a> 
+         <a data-w-tab="Tab 4" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector3==4}" (click)="selector3=4"> 
+          <div>
+            Decorator 
+          </div> </a> 
+         <a data-w-tab="Tab 5" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector3==5}" (click)="selector3=5"> 
+          <div>
+            Facade 
+          </div> </a> 
+         <a data-w-tab="Tab 6" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector3==6}" (click)="selector3=6"> 
+          <div>
+            Flyweight 
+          </div> </a> 
+         <a data-w-tab="Tab 7" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector3==7}" (click)="selector3=7"> 
+          <div>
+            Proxy 
+          </div> </a> 
+        </div> 
+        <div class="w-tab-content"> 
+         <div data-w-tab="Tab 1" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector3==1}" [hidden]="selector3==1"></div> 
+         <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector3==2}" [hidden]="selector3==2"></div> 
+         <div data-w-tab="Tab 3" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector3==3}" [hidden]="selector3==3"></div> 
+         <div data-w-tab="Tab 4" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector3==4}" [hidden]="selector3==4"></div> 
+         <div data-w-tab="Tab 5" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector3==5}" [hidden]="selector3==5"></div> 
+         <div data-w-tab="Tab 6" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector3==6}" [hidden]="selector3==6"></div> 
+         <div data-w-tab="Tab 7" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector3==7}" [hidden]="selector3==7"></div> 
+        </div> 
+       </div> 
+      </div> 
+      <div data-w-tab="Tab 3" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==3}" [hidden]="selector1==3"> 
+       <div data-duration-in="300" data-duration-out="100" class="w-tabs"> 
+        <div class="w-tab-menu"> 
+         <a data-w-tab="Tab 1" class="goft1 w-inline-block w-tab-link " [ngClass]="{'w--current' : selector4==1}" (click)="selector4=1"> 
+          <div>
+            Chain of Respondsibility 
+          </div> </a> 
+         <a data-w-tab="Tab 2" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==2}" (click)="selector4=2"> 
+          <div>
+            Command 
+          </div> </a> 
+         <a data-w-tab="Tab 3" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==3}" (click)="selector4=3"> 
+          <div>
+            Interpreter 
+          </div> </a> 
+         <a data-w-tab="Tab 4" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==4}" (click)="selector4=4"> 
+          <div>
+            Mediator 
+          </div> </a> 
+         <a data-w-tab="Tab 5" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==5}" (click)="selector4=5"> 
+          <div>
+            Memento 
+          </div> </a> 
+         <a data-w-tab="Tab 6" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==6}" (click)="selector4=6"> 
+          <div>
+            Observer 
+          </div> </a> 
+         <a data-w-tab="Tab 7" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==7}" (click)="selector4=7"> 
+          <div>
+            State 
+          </div> </a> 
+         <a data-w-tab="Tab 8" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==8}" (click)="selector4=8"> 
+          <div>
+            Strategy 
+          </div> </a> 
+         <a data-w-tab="Tab 9" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==9}" (click)="selector4=9"> 
+          <div>
+            Template Method 
+          </div> </a> 
+         <a data-w-tab="Tab 10" class="goft1 w-inline-block w-tab-link" [ngClass]="{'w--current' : selector4==10}" (click)="selector4=10"> 
+          <div>
+            Visitor 
+          </div> </a> 
+        </div> 
+        <div class="w-tab-content"> 
+         <div data-w-tab="Tab 1" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector4==1}" [hidden]="selector4==1"></div> 
+         <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==2}" [hidden]="selector4==2"></div> 
+         <div data-w-tab="Tab 3" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==3}" [hidden]="selector4==3"></div> 
+         <div data-w-tab="Tab 4" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==4}" [hidden]="selector4==4"></div> 
+         <div data-w-tab="Tab 5" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==5}" [hidden]="selector4==5"></div> 
+         <div data-w-tab="Tab 6" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==6}" [hidden]="selector4==6"></div> 
+         <div data-w-tab="Tab 7" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==7}" [hidden]="selector4==7"></div> 
+         <div data-w-tab="Tab 8" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==8}" [hidden]="selector4==8"></div> 
+         <div data-w-tab="Tab 9" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==9}" [hidden]="selector4==9"></div> 
+         <div data-w-tab="Tab 10" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector4==10}" [hidden]="selector4==10"></div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="text1 text16">
+     PERRY ANDERSON: WEB DESIGNER PORTFOLIO 
+   </div> 
+  </div> 
+ </div> 
+ <div class="linked"> 
+  <a href="https://www.linkedin.com/in/perryanderson" target="_blank" class="w-inline-block"><img src="assets/images/index.png" alt="" srcset=""></a> 
+  <a href="https://www.facebook.com/perry.anderson.969" target="_blank" class="w-inline-block"><img src="assets/images/index2.png" alt="" srcset=""></a> 
+ </div> 
+ <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=565ccc916473f20270135af5" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+

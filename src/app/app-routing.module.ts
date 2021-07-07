@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { BestPracticesItComponent } from './components/best-practices-it/best-practices-it.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
-import { AmazonComponent } from './components/amazon/amazon.component';
 import { HomeComponent } from './components/home/home.component';
+import { GofDesignPatternsComponent } from './components/gof-design-patterns/gof-design-patterns.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { AmazonComponent } from './components/amazon/amazon.component';
 import { StoryComponent } from './components/story/story.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BloombergComponent } from './components/bloomberg/bloomberg.component';
 import { Amazon2Component } from './components/amazon-2/amazon-2.component';
+import { Crc32BitCollisionComponent } from './components/crc-32bit-collision/crc-32bit-collision.component';
 
 const appRoutes: Routes = [
 	{ path: 'portfolio', component: PortfolioComponent  },
@@ -18,7 +21,10 @@ const appRoutes: Routes = [
 	{ path: 'story', component: StoryComponent  },
 	{ path: 'contact', component: ContactComponent  },
 	{ path: 'bloomberg', component: BloombergComponent  },
-	{ path: 'amazon_2', component: Amazon2Component  }
+	{ path: 'best_practices_it', component: BestPracticesItComponent  },
+	{ path: 'gof_design_patterns', component: GofDesignPatternsComponent  },
+	{ path: 'amazon_2', component: Amazon2Component  },
+	{ path: 'crc_32bit_collision', component: Crc32BitCollisionComponent  }
 ];
 
 @NgModule({

@@ -1,0 +1,127 @@
+<div class="main-section"> 
+  <div class="side-menu"> 
+   <img src="assets/images/logo.png" alt="" class="image1" srcset=""> 
+   <div class="text1 text6 text7 text10 text11 text14">
+     WEB DESIGNER 
+   </div> 
+   <div class="text1 text6 text10">
+     PERRY ANDERSON 
+   </div> 
+   <a href="http://www.exparx.com/" target="_blank" class="link w-inline-block"> 
+    <div class="text1 text6 text7 text10 text11 text14 text40">
+      E X P A R X, I N C. 
+    </div> </a> 
+   <ul role="list" class="list0"> 
+    <li class="list1"> <a class="link1" routerLink="/">Perry Anderson</a> </li> 
+    <li> <a class="link1" routerLink="/portfolio">Portfolio</a> </li> 
+    <li> <a class="link1" routerLink="/story">My Story</a> </li> 
+    <li> <a class="link1 hide" routerLink="/gof_design_patterns">GoF Design Patterns</a> </li> 
+    <li> <a class="link1" routerLink="/best_practices_it">Best Practices, (IT)</a> </li> 
+    <li> <a aria-current="page" class="link1 w--current" routerLink="/crc_32bit_collision">CRC 32bit Collision<br>‍</a> </li> 
+    <li> <a class="link1" routerLink="/bloomberg">Bloomberg Interview</a> </li> 
+    <li> <a class="link1" routerLink="/amazon">Amazon Interview</a> </li> 
+    <li> <a class="link1" routerLink="/amazon_2">Amazon Interview #2<br>‍</a> </li> 
+    <li> <a class="link1" routerLink="/privacy_policy">Privacy Policy</a> </li> 
+    <li> <a href="https://www.youtube.com/watch?v=BywDOO99Ia0" target="_blank" class="link1">Coffee Shop Music</a> </li> 
+    <li> <a class="link1" routerLink="/contact">Contact</a> </li> 
+   </ul> 
+  </div> 
+  <div class="right-area left-area"> 
+   <div> 
+    <div class="text0 large-caps">
+      CRC 32bit 
+    </div> 
+    <div class="text0 large-caps">
+      Collision 
+    </div> 
+    <div class="text0 paragraph t3 txxx">
+      Like a sighting over AREA 51, this is my CRC 32bit Collision experience... 
+    </div> 
+    <div class="explantion">
+      Due to my participation in the Post Graduate program from Purdue University in Data Science, (which specializes in Machine Learning and AI), a side project of mine that focus on the game of Chess, ( 
+     <a href="https://github.com/perriera/chessmind" target="_blank">ChessMind</a>), ran into a CRC 32-bit collision. 
+    </div> 
+    <div class="explantion">
+      Most if not all great Chess players of our time have had some assiation with 
+     <a href="https://www.chessgames.com" target="_blank">ChessGames.com</a> and while that site could certainly use a makeover, by way of a year $29 USD membership, I was able to gain access to all the Chess moves made by all of the great masters of our time in PNG format. 
+    </div> 
+    <div class="explantion">
+      In setting up the data structures required to model any of the great Chess players, (such as 
+     <a href="https://www.chessgames.com/perl/ezsearch.pl?search=Kasparov" target="_blank"> Gary Kasparov</a> and 
+     <a href="https://www.chessgames.com/perl/ezsearch.pl?search=FISCHER" target="_blank">Gary Fischer</a>), out of the 380,000 chess moves recorded on that site, I did manage to score a 32-bit CRC collision. 
+    </div> 
+    <div class="explantion">
+      The first order of business was to express the problem statement in terms of SPRINT terminology: "GIVEN, WHEN, THEN" 
+    </div> 
+    <div class="explantion highlight"> 
+     <strong>GIVEN</strong> that a CRC 32-bit collision has a 1 in 4.2 billion chance of happening<br><strong>WHEN</strong> a CRC 32-bit collision occurs<br><strong>THEN</strong> we switch to a higher level of CRC, (in this case CRC64) 
+    </div> 
+    <div class="explantion">
+      Like capturing a Gray outside of AREA 51, the two strings below generate the exact same 32-bit CRC value: 
+    </div> 
+    <div class="explantion code"><br>interface CRC32Interface {{"{"}}<br></div> 
+    <div class="explantion code indented">
+      ‍<br>std::string t1 =<br>"r1bq1rk1/2p1bppp/p2p1n2/np2p3/4P3/1BPP1N2/PP3PPP/RNBQR1K";<br><br>std::string T2 =<br>"2r2k2/p2bpp2/3p2p1/1pr4p/4PN1P/1P3P2/P1PR2P1/1K2R"<br><br>crc32 _crc;<br>cout &lt;&lt; _crc.update((T1) &lt;&lt; endl;<br>cout &lt;&lt; _crc.update((T2) &lt;&lt; endl;<br>‍ 
+    </div> 
+    <div class="explantion code">
+      {{"}"}};<br>‍ 
+    </div> 
+    <div class="explantion">
+      The test case is listed below: 
+    </div> 
+    <img src="assets/images/XCV001.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/XCV001-p-500.png 500w, assets/images/XCV001-p-800.png 800w, assets/images/XCV001-p-1080.png 1080w, assets/images/XCV001-p-1600.png 1600w, assets/images/XCV001.png 1916w" alt="" class="t4"> 
+    <div class="explantion bump">
+      To keep in step with CRC experts the actual code used to generate the CRC is listed below. As a simple change in the CRC seed value may have prevent this from occurring, (in this case), just changing the seed value would really just be masking the error to show up later. So, in the case of the ChessMind framework, we switched to a 64 bit CRC generator. Both of which can be found as standard issue on the 
+     <a href="https://github.com/perriera/cpp_skeleton/tree/main/extra/include" target="_blank">skeleton C++ project</a>. Where possible the authors of the software have been recognized in the source code itself. 
+    </div> 
+    <div class="text0 paragraph t3">
+      CRC 16, 32, 64 bit Implementations 
+    </div> 
+    <div data-duration-in="300" data-duration-out="100" class="b1 w-tabs"> 
+     <div class="w-tab-menu"> 
+      <a data-w-tab="Tab 1" class="w-inline-block w-tab-link " [ngClass]="{'w--current' : selector1==1}" (click)="selector1=1"> 
+       <div>
+         CRC16 
+       </div> </a> 
+      <a data-w-tab="Tab 2" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==2}" (click)="selector1=2"> 
+       <div>
+         CRC32 
+       </div> </a> 
+      <a data-w-tab="Tab 3" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==3}" (click)="selector1=3"> 
+       <div>
+         CRC64 
+       </div> </a> 
+     </div> 
+     <div class="w-tab-content"> 
+      <div data-w-tab="Tab 1" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==1}" [hidden]="selector1==1"> 
+       <h4 class="h33">Our CRC16 algorithm comes compliments<br>Joao Alves &lt;jpralves@gmail.com&gt;</h4> 
+       <img src="assets/images/XCV002.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/XCV002-p-500.png 500w, assets/images/XCV002-p-800.png 800w, assets/images/XCV002-p-1080.png 1080w, assets/images/XCV002-p-1600.png 1600w, assets/images/XCV002.png 1734w" alt="" class="t4"> 
+       <div class="explantion"><br>‍<br>CRC16 will have a set of values equal to 2^16 or 65536 possible values.<br>Which is great for tiny packets where every byte makes a difference<br>‍ 
+       </div> 
+      </div> 
+      <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==2}" [hidden]="selector1==2"> 
+       <h4 class="h33">Our CRC32 algorithm comes compliments<br>hi.baidu.com/timepp &lt;tongjunhui@live.cn&gt;</h4> 
+       <img src="assets/images/XCV003.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/XCV003-p-500.png 500w, assets/images/XCV003-p-800.png 800w, assets/images/XCV003-p-1080.png 1080w, assets/images/XCV003-p-1600.png 1600w, assets/images/XCV003.png 1782w" alt="" class="t4"> 
+       <div class="explantion"><br>‍<br>CRC32 will have a set of values equal to 2^32 or 4.2+ billion possible values.<br>Which is great for most purposes but you should always check for the existence of a CRC key fresh after generation so that you know you do not have a duplicate.<br>‍ 
+       </div> 
+      </div> 
+      <div data-w-tab="Tab 3" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==3}" [hidden]="selector1==3"> 
+       <h4 class="h33">Our CRC64 algorithm comes compliments<br>hi.baidu.com/timepp &lt;tongjunhui@live.cn&gt;</h4> 
+       <img src="assets/images/XCV004.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/XCV004-p-500.png 500w, assets/images/XCV004-p-800.png 800w, assets/images/XCV004-p-1080.png 1080w, assets/images/XCV004-p-1600.png 1600w, assets/images/XCV004.png 1942w" alt="" class="t4"> 
+       <div class="explantion"><br>‍<br>CRC64 will have a set of values equal to 2^64 or 1.84x10+19 possible values.<br>(aka. We'll update this site as soon as a duplicate shows up.)<br>‍ 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="text1 text16">
+     PERRY ANDERSON: WEB DESIGNER PORTFOLIO 
+   </div> 
+  </div> 
+ </div> 
+ <div class="linked"> 
+  <a href="https://www.linkedin.com/in/perryanderson" target="_blank" class="w-inline-block"><img src="assets/images/index.png" alt="" srcset=""></a> 
+  <a href="https://www.facebook.com/perry.anderson.969" target="_blank" class="w-inline-block"><img src="assets/images/index2.png" alt="" srcset=""></a> 
+ </div> 
+ <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=565ccc916473f20270135af5" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
