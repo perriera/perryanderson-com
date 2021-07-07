@@ -42,13 +42,13 @@
      <a href="https://github.com/perriera/chessmind" target="_blank">ChessMind</a>), ran into a CRC 32-bit collision. 
     </div> 
     <div class="explantion">
-      Most if not all great Chess players of our time have had some assiation with 
+      Most if not all great Chess players of our time have had some association with 
      <a href="https://www.chessgames.com" target="_blank">ChessGames.com</a> and while that site could certainly use a makeover, by way of a year $29 USD membership, I was able to gain access to all the Chess moves made by all of the great masters of our time in PNG format. 
     </div> 
     <div class="explantion">
       In setting up the data structures required to model any of the great Chess players, (such as 
      <a href="https://www.chessgames.com/perl/ezsearch.pl?search=Kasparov" target="_blank"> Gary Kasparov</a> and 
-     <a href="https://www.chessgames.com/perl/ezsearch.pl?search=FISCHER" target="_blank">Gary Fischer</a>), out of the 380,000 chess moves recorded on that site, I did manage to score a 32-bit CRC collision. 
+     <a href="https://www.chessgames.com/perl/ezsearch.pl?search=FISCHER" target="_blank">Robert James Fischer</a>), out of the 380,000 chess moves recorded on that site, I did manage to score a 32-bit CRC collision. 
     </div> 
     <div class="explantion">
       The first order of business was to express the problem statement in terms of SPRINT terminology: "GIVEN, WHEN, THEN" 
@@ -91,6 +91,10 @@
        <div>
          CRC64 
        </div> </a> 
+      <a data-w-tab="Tab 4" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==4}" (click)="selector1=4"> 
+       <div>
+         AREA 51 
+       </div> </a> 
      </div> 
      <div class="w-tab-content"> 
       <div data-w-tab="Tab 1" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==1}" [hidden]="selector1==1"> 
@@ -109,6 +113,12 @@
        <h4 class="h33">Our CRC64 algorithm comes compliments<br>hi.baidu.com/timepp &lt;tongjunhui@live.cn&gt;</h4> 
        <img src="assets/images/XCV004.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/XCV004-p-500.png 500w, assets/images/XCV004-p-800.png 800w, assets/images/XCV004-p-1080.png 1080w, assets/images/XCV004-p-1600.png 1600w, assets/images/XCV004.png 1942w" alt="" class="t4"> 
        <div class="explantion"><br>‍<br>CRC64 will have a set of values equal to 2^64 or 1.84x10+19 possible values.<br>(aka. We'll update this site as soon as a duplicate shows up.)<br>‍ 
+       </div> 
+      </div> 
+      <div data-w-tab="Tab 4" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==4}" [hidden]="selector1==4"> 
+       <h4 class="h33">Our CRC128 algorithm comes compliments<br>Whitley Striber &lt;<a routerLink="/#">https://www.unknowncountry.com/</a>&gt;</h4> 
+       <img src="assets/images/9781429914857.jpg" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/9781429914857.jpg 500w, assets/images/9781429914857.jpg 620w" alt="" class="t4"> 
+       <div class="explantion"><br>‍<br>CRC128 will have a set of values equal to 2^64 or 3.4x10+38 possible values.<br>(aka. We'll update this site as soon as a duplicate on that one shows up too.)<br>‍ 
        </div> 
       </div> 
      </div> 
