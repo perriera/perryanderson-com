@@ -2957,6 +2957,17 @@ textarea.w-select {
   margin-top: 37px;
 }
 
+.explantion.xs {
+  display: none;
+  margin-bottom: 18px;
+  padding: 8px 14px 6px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #bdddcb;
+  border-radius: 1px;
+  background-color: #a1c59f;
+}
+
 .m1 {
   margin: 12px;
 }
