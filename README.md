@@ -24,13 +24,17 @@ Sometimes it’s optional but I recommend you to do it.
 
 Here we’re using sudo to avoid any permission issues that may occur.
 
-### 4. Create a workspace and initial Angular application
+### 4. Update project to version 12 of Angular
 
-	   ng new my-app
+	sudo npm install npm@latest -g
+	sudo npm install --save-dev @angular-devkit/build-angular
+	sudo npm update
+	npm install --save --legacy-peer-deps
+	npm audit fix 
 
 ### 5. Run the application
 
-	   cd my-app
+	   cd perryanderson-com
 	   ng serve --open
 
 Now we’re good to go.
