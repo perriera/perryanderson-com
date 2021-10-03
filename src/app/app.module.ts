@@ -11,6 +11,7 @@ import { BestPracticesItComponent } from './components/best-practices-it/best-pr
 import { BloombergComponent } from './components/bloomberg/bloomberg.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { Crc32BitCollisionComponent } from './components/crc-32bit-collision/crc-32bit-collision.component';
+import { GofAbstractFactoryPatternComponent } from './components/gof-abstract-factory-pattern/gof-abstract-factory-pattern.component';
 import { GofDesignPatternsComponent } from './components/gof-design-patterns/gof-design-patterns.component';
 import { HomeComponent } from './components/home/home.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
@@ -26,6 +27,7 @@ import { StoryComponent } from './components/story/story.component';
     BloombergComponent,
     ContactComponent,
     Crc32BitCollisionComponent,
+    GofAbstractFactoryPatternComponent,
     GofDesignPatternsComponent,
     HomeComponent,
     PortfolioComponent,

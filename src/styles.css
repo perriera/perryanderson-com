@@ -2167,6 +2167,7 @@ textarea.w-select {
 }
 .main-body {
   margin: 76px;
+  border-top: 1px solid #706666;
 }
 
 .text1 {
@@ -2383,6 +2384,10 @@ textarea.w-select {
   padding-bottom: 41px;
   font-size: 66px;
   font-weight: 700;
+}
+
+.text0.large-caps.slightly-smaller-caps {
+  font-size: 40px;
 }
 
 .text0.paragraph {
@@ -2915,6 +2920,25 @@ textarea.w-select {
 .t4 {
   margin-bottom: -18px;
   box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.t4.edge {
+  border-top: 1px dotted rgba(0, 0, 0, 0.5);
+  border-left: 1px dotted #000;
+}
+
+.t4.e23 {
+  border-right: 1px dotted #000;
+}
+
+.t4.e24 {
+  width: 800px;
+  margin-top: 22px;
+  margin-bottom: 35px;
+  padding: 26px 20px 24px 18px;
+  border-top: 1px dotted #000;
+  border-right: 1px dotted #000;
+  border-left: 1px dotted #000;
 }
 
 .explantion {

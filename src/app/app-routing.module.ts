@@ -6,6 +6,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
 import { HomeComponent } from './components/home/home.component';
 import { GofDesignPatternsComponent } from './components/gof-design-patterns/gof-design-patterns.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { GofAbstractFactoryPatternComponent } from './components/gof-abstract-factory-pattern/gof-abstract-factory-pattern.component';
 import { AmazonComponent } from './components/amazon/amazon.component';
 import { StoryComponent } from './components/story/story.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
 	{ path: 'best_practices_it', component: BestPracticesItComponent  },
 	{ path: 'gof_design_patterns', component: GofDesignPatternsComponent  },
 	{ path: 'amazon_2', component: Amazon2Component  },
-	{ path: 'crc_32bit_collision', component: Crc32BitCollisionComponent  }
+	{ path: 'crc_32bit_collision', component: Crc32BitCollisionComponent  },
+	{ path: 'gof_abstract_factory_pattern', component: GofAbstractFactoryPatternComponent  }
 ];
 
 @NgModule({
