@@ -61,7 +61,7 @@
     <div class="text0 paragraph t3">
       Design by Interface 
     </div> 
-    <div data-duration-in="300" data-duration-out="100" class="b1 w-tabs"> 
+    <div data-duration-in="300" data-duration-out="100" data-current="Tab 7" data-easing="ease" class="b1 w-tabs"> 
      <div class="w-tab-menu"> 
       <a data-w-tab="Tab 3" class="w-inline-block w-tab-link" [ngClass]="{'w--current' : selector1==1}" (click)="selector1=1"> 
        <div>
@@ -95,25 +95,25 @@
      <div class="w-tab-content"> 
       <div data-w-tab="Tab 3" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==1}" [hidden]="selector1==1"> 
        <h4 class="h33">JIRA entries lend themselves well to Interfaces</h4> 
-       <img src="assets/images/PC005.png" sizes="(max-width: 479px) 100vw, 521px" srcset="assets/images/PC005.png 500w, assets/images/PC005.png 520w" alt="" class="t4 edge"> 
+       <img sizes="(max-width: 479px) 100vw, 521px" srcset="assets/images/PC005-p-500.png 500w, assets/images/PC005.png 520w" src="assets/images/PC005.png" alt="" class="t4 edge"> 
        <div class="explantion"><br>A well defined interface should have a related JIRA entry. Something that can be explained in terms of GIVEN, WHEN &amp; THEN. In this way, not only can we identify the work to be done but also keep track of the work to be done using test cases and source repositories.<br><br><a href="https://www.atlassian.com/software/jira?&amp;aceid=&amp;adposition=&amp;adgroup=89541920342&amp;campaign=9124878366&amp;creative=542638212188&amp;device=c&amp;keyword=jira&amp;matchtype=e&amp;network=g&amp;placement=&amp;ds_kids=p51241989307&amp;ds_e=GOOGLE&amp;ds_eid=700000001558501&amp;ds_e1=GOOGLE&amp;gclid=EAIaIQobChMI36Cs2dqs8wIV5D6tBh3KjwZwEAAYAiAAEgIPOvD_BwE&amp;gclsrc=aw.ds" target="_blank">JIRA</a> is a popular online website for specifying, managing and distributing software development components and task.<br><a href="https://en.wikipedia.org/wiki/Hoare_logic#Hoare_triple" target="_blank">Hoare Logic</a> is a popular method of specifying the task to be done in Given, When, Then format.<br>‍ 
        </div> 
       </div> 
       <div data-w-tab="Tab 7" class="w-tab-pane " [ngClass]="{'w--tab-active' : selector1==2}" [hidden]="selector1==2"> 
        <h4 class="h33">Wikipedia's "Design by Interfaces" description</h4> 
-       <img src="assets/images/PC015.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC015.png 500w, assets/images/PC015.png 800w, assets/images/PC015.png 1080w, assets/images/PC015.png 1118w" alt="" class="t4 e24"> 
+       <img sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC015-p-500.png 500w, assets/images/PC015-p-800.png 800w, assets/images/PC015-p-1080.png 1080w, assets/images/PC015.png 1118w" src="assets/images/PC015.png" alt="" class="t4 e24"> 
        <div class="explantion"><br><strong>"<em>Design by Interface</em>" tends to quickly identify easier ways of doing things:</strong>‍<br>‍<br>In the above diagram you can see an MVC, (model-view-control) designed with the Observer specified as a interface, (as opposed to a class). In the Observer interface the update() method has been declared. It is up to each class that implements this interface to define an update() method, (and adhere to it's specification).<br>‍<br><a href="https://en.wikipedia.org/wiki/Abstract_factory_pattern" target="_blank">GoF: Abstract factory pattern</a> is one of the foremost authorifies on the use of interfaces in software developement.<br>‍ 
        </div> 
       </div> 
       <div data-w-tab="Tab 1" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==3}" [hidden]="selector1==3"> 
        <h4 class="h33">Header files before the use of Interfaces</h4> 
-       <img src="assets/images/PC001.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC001.png 500w, assets/images/PC001.png 800w, assets/images/PC001.png 924w" alt="" class="t4"> 
+       <img sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC001-p-500.png 500w, assets/images/PC001-p-800.png 800w, assets/images/PC001.png 924w" src="assets/images/PC001.png" alt="" class="t4"> 
        <div class="explantion"><br>‍<br>Without a properly defined interface, any number of header files can be developed, (trying to resolve one issue after another). A bit like throwing rocks at the broad side of a barn to get it to fall down. This is not a good way to program software.<br>‍ 
        </div> 
       </div> 
       <div data-w-tab="Tab 2" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==4}" [hidden]="selector1==4"> 
        <h4 class="h33">All those header files now reduced down to just one interface:<br></h4> 
-       <img src="assets/images/PC004.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC004.png 500w, assets/images/PC004.png 800w, assets/images/PC004.png 1080w, assets/images/PC004.png 1268w" alt="" class="t4"> 
+       <img sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC004-p-500.png 500w, assets/images/PC004-p-800.png 800w, assets/images/PC004-p-1080.png 1080w, assets/images/PC004.png 1268w" src="assets/images/PC004.png" alt="" class="t4"> 
        <div class="explantion"><br>‍<br>With a properly defined interface, a skilled software developer can quickly see what the original objective of the software's inception was, (plus it's current state of affairs as well as what options are available for further development).<br>‍<br>Custom exceptions? It is generally a good idea to define what possible exceptions might arise out of the interface's methods with the definition of the interface.<br><br>The 
         <strong>pure</strong> keyword? C++ hasn't added a keyword by the name of 
         <strong>pure</strong>, but a skilled C++ developer knows that defining a keyword as 
@@ -122,19 +122,19 @@
       </div> 
       <div data-w-tab="Tab 6" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==5}" [hidden]="selector1==5"> 
        <h4 class="h33">Mocking Framework, (Eran Peer's FakeIt C++ tools)</h4> 
-       <img src="assets/images/PC012.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC012.png 500w, assets/images/PC012.png 800w, assets/images/PC012.png 1080w, assets/images/PC012.png 2383w" alt="" class="t4 e23"> 
+       <img sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC012-p-500.png 500w, assets/images/PC012-p-800.png 800w, assets/images/PC012-p-1080.png 1080w, assets/images/PC012.png 2383w" src="assets/images/PC012.png" alt="" class="t4 e23"> 
        <div class="explantion"><br><strong><br>"<em>Design by Interface</em>" tends to quickly identify easier ways of doing things:</strong>‍<br>‍<br>From a cost/time saving perspective, it is advantageous to develop your interface using tools that simulate implementation code. Otherwise, you'll find yourself writing a lot of boilder-plate code that tends to consume time and energy as methods are either added, changed or deleted on your interface specification.<br>‍<br><a href="https://github.com/eranpeer/FakeIt" target="_blank">FakeIt</a> a popular C++ interface mocking framework.<br>‍ 
        </div> 
       </div> 
       <div data-w-tab="Tab 4" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==6}" [hidden]="selector1==6"> 
        <h4 class="h33">Test Driven Development, (with Catch2)</h4> 
-       <img src="assets/images/PC009.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC009.png 500w, assets/images/PC009.png 800w, assets/images/PC009.png 1080w, assets/images/PC009.png 1386w" alt="" class="t4"> 
+       <img sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC009-p-500.png 500w, assets/images/PC009-p-800.png 800w, assets/images/PC009-p-1080.png 1080w, assets/images/PC009.png 1386w" src="assets/images/PC009.png" alt="" class="t4"> 
        <div class="explantion"><br><strong><br>"<em>Design by Interface</em>" tends to quickly identify easier ways of doing things:</strong>‍<br>‍<br>You might think that going through the trouble of specifying an interface is just too much of a waste of time, (with few benefits). Yet, even in adding this to my blog, I was able to identify an easier method of implementing the moves() method, (of the specified interface) just by adding it here. Such that, the original attempt to implement the moves() method brought in a number of issues, (you see reflected on the first tab). Now that we have a properly defined interface, I can see how merely counting the number of FEN line entries easily meets the requirements of this interface, (as all the issues related to reading SAN Chess format are now just an option and not a requirement as far as this interface method is concerned).<br>‍<br><a href="https://github.com/catchorg/Catch2" target="_blank">Catch2</a> is a popular C++ framework for writing test cases.<br>‍ 
        </div> 
       </div> 
       <div data-w-tab="Tab 5" class="w-tab-pane" [ngClass]="{'w--tab-active' : selector1==7}" [hidden]="selector1==7"> 
        <h4 class="h33">Source Code Repository, (Linus Torvald's Github)</h4> 
-       <img src="assets/images/PC010.png" sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC010.png 500w, assets/images/PC010.png 800w, assets/images/PC010.png 1080w, assets/images/PC010.png 1151w" alt="" class="t4 e23"> 
+       <img sizes="(max-width: 479px) 100vw, 563px" srcset="assets/images/PC010-p-500.png 500w, assets/images/PC010-p-800.png 800w, assets/images/PC010-p-1080.png 1080w, assets/images/PC010.png 1151w" src="assets/images/PC010.png" alt="" class="t4 e23"> 
        <div class="explantion"><br><strong><br>"<em>Design by Interface</em>" tends to quickly identify easier ways of doing things:</strong>‍<br>‍<br>Keeping track of new features and changes to current functionality requires a good method of managing different versions of source code, (whether alone or within a team of developers). Linus Torvalds invented Git 15 
         <strong>years ago in order to continue development of the Linux kernel</strong>. The original team could no longer use BitKeeper. At the time, no other Source Control Management (SCMs) met their specific requirements for a distributed system, ( 
         <a href="https://www.weave.works/blog/15-years-of-git" target="_blank">Apr. 15, 2020</a>).<br>‍<br><a href="https://github.com/" target="_blank">Github.com</a> is a popular source code repository.<br>‍ 
