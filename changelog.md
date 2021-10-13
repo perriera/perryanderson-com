@@ -3,8 +3,8 @@
 > All notable changes to this project will be documented in this file.</br>
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).</br>
 > To add a tag to the git repository do:
-> > git tag -a v0.3.1 -m "Design by Interface, (fixed)"</br>
-> > git push origin v0.3.1
+> > git tag -a v0.4.0 -m "Updated contact info"</br>
+> > git push origin v0.4.0
 > 
 
 IMPORTANT: 
@@ -26,6 +26,10 @@ Correct URL for github, (for source compare)</br>
 ## [Next Steps]
 Updated README.md accordinging</br>
 
+#### 0.4.0 (2021-09-12)
+### Added
+- updated content
+
 #### 0.3.1 (2021-08-26)
 ### Added
 - removed unused content
@@ -44,7 +48,8 @@ Updated README.md accordinging</br>
 ### Removed
 - Accidentally included CSR/KEY files from github.com
 
-[Unreleased]: https://github.com/perriera/perryanderson-com.git/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/perriera/perryanderson-com.git/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/perriera/perryanderson-com.git/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/perriera/perryanderson-com.git/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/perriera/perryanderson-com.git/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/perriera/perryanderson-com.git/compare/v0.1.0...v0.2.0
