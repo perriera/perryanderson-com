@@ -3,7 +3,7 @@
 > All notable changes to this project will be documented in this file.</br>
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).</br>
 > To add a tag to the git repository do:
-> > git tag -a v0.5.0 -m "Updated contact info"</br>
+> > git tag -a v0.5.0 -m "Github logo/icon "</br>
 > > git push origin v0.5.0
 > 
 
@@ -28,7 +28,7 @@ Updated README.md accordinging</br>
 
 #### 0.5.0 (2021-09-12)
 ### Added
-- added Github logo/icon 
+- Github logo/icon 
 
 #### 0.4.0 (2021-09-12)
 ### Added
