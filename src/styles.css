@@ -275,8 +275,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -287,8 +287,8 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 /**
@@ -296,7 +296,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. CUSTOM FOR WEBFLOW: box-sizing: content-box rule removed
  *    (similar to normalize.css >=4.0.0)
  */
-input[type="search"] {
+input[type='search'] {
   -webkit-appearance: none;
   /* 1 */
 }
@@ -305,8 +305,8 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 /**
@@ -651,8 +651,8 @@ fieldset {
   border: 0;
 }
 button,
-html input[type="button"],
-input[type="reset"] {
+html input[type='button'],
+input[type='reset'] {
   border: 0;
   cursor: pointer;
   -webkit-appearance: button;
@@ -1249,9 +1249,6 @@ textarea.w-select {
 }
 .w-widget-twitter-count-shim.w--vertical.w--large {
   width: 76px;
-}
-.w-widget-gplus {
-  overflow: hidden;
 }
 .w-background-video {
   position: relative;
@@ -2271,10 +2268,6 @@ textarea.w-select {
   margin-left: auto;
 }
 
-.image1.image29 {
-  height: 600px;
-}
-
 .list1 {
   margin-top: 106px;
 }
@@ -2383,7 +2376,7 @@ textarea.w-select {
 .text0.large-caps {
   padding-bottom: 41px;
   font-size: 66px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .text0.large-caps.slightly-smaller-caps {
@@ -2457,12 +2450,20 @@ textarea.w-select {
   font-weight: 700;
 }
 
+.text0.education.xsa {
+  margin-bottom: 26px;
+}
+
 .text0.extra {
   padding-bottom: 42px;
 }
 
 .text0.linkit {
   color: #333;
+}
+
+.text0.xaa {
+  margin-bottom: 17px;
 }
 
 .text21 {
@@ -2941,9 +2942,18 @@ textarea.w-select {
   border-left: 1px dotted #000;
 }
 
+.t4.e24.hidden {
+  display: none;
+}
+
+.t4.e24.hx25 {
+  display: none;
+}
+
 .explantion {
-  margin-top: 16px;
-  margin-bottom: 14px;
+  margin-top: 30px;
+  margin-bottom: 46px;
+  padding-bottom: 0px;
   padding-left: 4px;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-size: 15px;
@@ -3084,6 +3094,10 @@ textarea.w-select {
 
 .goft2.w--current {
   background-color: #e3e9a0;
+}
+
+.image {
+  width: 200px;
 }
 
 

@@ -15,18 +15,18 @@ import { Amazon2Component } from './components/amazon-2/amazon-2.component';
 import { Crc32BitCollisionComponent } from './components/crc-32bit-collision/crc-32bit-collision.component';
 
 const appRoutes: Routes = [
-	{ path: 'portfolio', component: PortfolioComponent  },
+	{ path: 'best_practices_it', component: BestPracticesItComponent  },
 	{ path: 'privacy_policy', component: PrivacyPolicyComponent  },
-	{ path: 'amazon', component: AmazonComponent  },
 	{ path: '', component: HomeComponent  },
+	{ path: 'gof_design_patterns', component: GofDesignPatternsComponent  },
+	{ path: 'portfolio', component: PortfolioComponent  },
+	{ path: 'gof_abstract_factory_pattern', component: GofAbstractFactoryPatternComponent  },
+	{ path: 'amazon', component: AmazonComponent  },
 	{ path: 'story', component: StoryComponent  },
 	{ path: 'contact', component: ContactComponent  },
 	{ path: 'bloomberg', component: BloombergComponent  },
-	{ path: 'best_practices_it', component: BestPracticesItComponent  },
-	{ path: 'gof_design_patterns', component: GofDesignPatternsComponent  },
 	{ path: 'amazon_2', component: Amazon2Component  },
 	{ path: 'crc_32bit_collision', component: Crc32BitCollisionComponent  },
-	{ path: 'gof_abstract_factory_pattern', component: GofAbstractFactoryPatternComponent  }
 ];
 
 @NgModule({
